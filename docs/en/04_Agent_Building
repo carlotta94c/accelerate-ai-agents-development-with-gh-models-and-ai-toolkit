@@ -9,7 +9,7 @@ In this section, you will learn how to create an AI agent with Agent Builder in 
 
 To access Agent Builder, in the AI Toolkit view, select **Agent Builder**.
 
-![Agent Builder](../../img/agent-builder.png)
+![Agent Builder](../../img/agent_builder.png)
 
 Agent Builder's UI is organized into two sections. The left side of Agent Builder enables you to define the basic information for the agent such as its name, model choice, instructions, and any relevant tools. The right side of Agent Builder is where you can both chat with the agent and evaluate the agent's responses.
 
