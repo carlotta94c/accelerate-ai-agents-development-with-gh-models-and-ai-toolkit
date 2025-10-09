@@ -12,26 +12,12 @@ copyright: >
   Copyright &copy; 2023 - present Microsoft
 
 nav:
-  - Home: index.md
-  - Workshop Navigation: navigating-workshop.md
-  - Getting Started:
-    - Workshop Introduction: workshop-introduction.md
-    - Opening the Repository in GitHub Codespaces: opening-repository-in-GH-codespaces.md
-    - Understanding the Project: understanding-project.md
-  - Strategize with Copilot:
-    - Analyze the Project: analyze-project.md
-  - Converting to Rust:
-    - Create Rust Scaffolding: create-rust-scaffolding.md
-    - Implementing Endpoints: implementing-endpoints.md
-  - Validation and Testing:
-    - Validate correctness and add more endpoints: validate-correctness.md
-    - Add Rust Tests: add-rust-tests.md
+  - Home: 00_Introduction.md
+  - Getting Started: 01_Getting_Started.md
+  - Model Selection: 02_Model_Selection.md
+  - Model Augmentation: 03_Model_Augmentation.md
+  - Agent Building: 04_Agent_Building.md
   - Summary: summary.md
-  - Bonus Content:
-    - Challenge 1: Challenge-1.md
-    - Challenge 2: Challenge-2.md
-    - Homework: Homework.md
-  - Resources: resources.md
 
 plugins:
   - glightbox
