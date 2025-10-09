@@ -85,7 +85,7 @@ Now, test the models' image processing capabilities:
 
 1. Enter this prompt in the text field:
    ```
-   Improve the Linkedin post above by focusing on the tool illustrated in the attached image.
+   Extract the text from the attached image.
    ```
 
 2. Click the image attachment icon to add a picture as input
@@ -100,7 +100,7 @@ Now, test the models' image processing capabilities:
 
 4. Send the multimodal prompt on both models simultaneously.
 
-Observe how each model incorporates the image context - including the extracted text - into their responses, by focusing the LinkedIn post content on the tool illustrated in the image.
+Observe how each model handles the image input and the accuracy of the extracted text.
 
 Next, let's test their reasoning capabilities, with the following prompt:
 

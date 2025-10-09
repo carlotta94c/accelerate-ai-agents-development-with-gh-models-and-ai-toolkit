@@ -45,40 +45,40 @@ Note that this message includes:
 
 ## Step 2: Testing the System Message with Multimodal Input
 
-Now that we configured the system prompt, let's test the system with a multimodal user prompt. Attach again the [same image](../../img/demo-living-room.png) of the living room we used in the [previous section](./02_Model_Selection.md), and combine it with the following user prompt:
+Now that we configured the system prompt, let's test the system with a user prompt. Attach again the [same image](../../img/gh_copilot_slide.png) of the github copilot slide we used in the [previous section](./02_Model_Selection.md), and combine it with the following user prompt:
 
 ```
-Here’s a photo of my living room. I’m not sure whether I should go with eggshell or semi-gloss. Can you tell which would work better based on the lighting and layout?
+Create a short LinkedIn post about the Global AI Community and its activites.
 ```
 
-The model will analyze the image and provides a suggestion, adding some reasoning to back up its recommendation. Read through the response and see if it aligns with the expectations set in the system message.
+The model will analyze the image and provides a suggestion for a LinkedIn post that aligns with the user's request and the guidelines set in the system message. Note how there's no reference to GitHub Copilot in the system message or the user prompt, yet the model is able to identify the tool in the image and incorporate it into the response.
 
-Let's now test the model with a user query which is not relevant to Zava's business. Enter the following prompt:
+Let's now test the model with a user query which is not relevant to the given scenario. Enter the following prompt:
 
 ```
-What’s the weather like in San Francisco today? 
+What’s the weather like in Messina today? 
 ```
 
-The model should politely inform the user that it can only assist with Zava-related inquiries, demonstrating its ability to follow the guidelines set in the system message.
+The model should politely inform the user that it can only assist with social media content creation, demonstrating its ability to follow the guidelines set in the system message.
 
 ## Step 3: Adding Grounding Data
 
 In addition to the system message, providing context data can significantly enhance the model's ability to generate relevant and accurate responses. Context data can include information about your business, products, services, or any other relevant details that can help the model better understand the scenario.
 
-For our use case, we are going to provide the model with some context about Zava's product catalog, as we'd like our solution to be able to recommend products based on customer queries. In fact, the model doesn't have any knowledge besides its training data, so it doesn't know anything about Zava's products and could make up information if asked about them.
+For our use case, we are going to provide the model with some context about the [Global AI Community](https://globalai.community/), the largest worldwide developer community focused on AI, with a special focus on the local chapters based in Italy.
 
 To add grounding data, we will use the **file attachment** feature in the Playground. This allows us to upload documents that the model can reference when generating responses.
 
-The document we are going to upload is a JSON file containing the Zava's product catalog, with a selection of DYI-related products - including paints, hammers, pliers and several other tools - along with all their details - description, availability, price. In the workspace directory, browse to the `/workspace/data/` folder and locate the file named `zava_product_catalog.json`. [Open it](../../data/zava_products_catalog.json) in the code editor to take a look at its content.
+The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `/workspace/data/` directory of your AITK environment, named `global_ai_community.docx`.
 
 1. Click the file attachment icon in the prompt input area.
 ![File attachment icon](../../img/file_attachment_icon.png)
-2. Select the file `zava_product_catalog.json` from the `/workspace/data/` directory.
+2. Select the file `global_ai_community.docx` from the `/workspace/data/` directory.
 
 > [!TIP]
 > In the text field that appears, you can enter the following path to the file:
 > ```
->/workspace/data/zava_product_catalog.json
+>/workspace/data/global_ai_community.docx
 > ```
 
 ![Uploading Grounding Data File](../../img/uploading_grounding_data_file.png)
@@ -86,10 +86,10 @@ The document we are going to upload is a JSON file containing the Zava's product
 3. Once the file is uploaded, it will appear as an attachment below the prompt input area.
 4. Enter the following prompt in the text field:
 ```
-Suggest an eggshell paint from the attached Zava product catalog.
+Create a short LinkedIn post to promote the Global AI Community and its activities.
 ```
 
-The model will analyze the uploaded product catalog and provide a grounded suggestion for an eggshell paint that matches the user's request.
+The model will analyze the uploaded document and provide a grounded suggestion for a LinkedIn post that highlights the Global AI Community's mission, key statistics, and its presence in Italy.
 
 What happens behind the scenes is that the attached data are automatically included in the prompt context, enabling the model to generate more informed and relevant responses.
 
