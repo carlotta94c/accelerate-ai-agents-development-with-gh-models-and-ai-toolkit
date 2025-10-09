@@ -19,30 +19,30 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
     - Select your Country/Region and agree to the terms of service.
     - Click on the **Create account** button and wait for the verification email to arrive in your inbox.
 
-    ![GitHub Account Sign Up](../../img/github_signup.png)
+    ![GitHub Account Sign Up](../img/github_signup.png)
 
     - Copy the verification code from the email and paste it into the verification field on the GitHub website. Then click on **Continue**.
     - Once the account is created, you'll be redirected back to the GitHub repo page and you'll see a green banner at the top, like the one in the screenshot below.
 
-    ![GitHub Repo Banner](../../img/github_repo_banner.png)
+    ![GitHub Repo Banner](../img/github_repo_banner.png)
 
 3. Click on **Sign in** and enter your GitHub credentials to log in. If you just created your account, use the username and password you set during the sign-up process.
 
 4. Next, click on the green **Code** button and select **Create codespace on main** from the dropdown menu.
 
-    ![Create Codespace](../../img/create_codespace.png)
+    ![Create Codespace](../img/create_codespace.png)
 
 5. Once the codespace is created, you'll see a Visual Studio Code environment loading in your browser. You might choose to continue working in the browser or click on the **Open in VS Code** button to open it in the desktop application (if you have it installed in your machine).
 
-    ![Open in VS Code](../../img/open_in_vscode.png)
+    ![Open in VS Code](../img/open_in_vscode.png)
 
 ## Verify AI Toolkit extension is installed
 
 In the GitHub Codespace, you should be able to see - among the Visual Studio Code extensions already installed - the **AI Toolkit**. This is the extension we will be using to interact with various AI models and services in this lab.
 
-![Installed extensions](../../img/installed_extensions.png)
+![Installed extensions](../img/installed_extensions.png)
 
->[!TIP]
+> [!TIP]
 > If you don't see the extension icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
 
 ## Ready to start

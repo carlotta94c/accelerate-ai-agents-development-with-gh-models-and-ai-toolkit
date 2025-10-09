@@ -40,7 +40,7 @@ Your personality is:
 - Stick to the scenario above. If something falls outside social media content creation, respond to the user politely with your scope limits.
 ```
 
-![System Prompt](../../img/system_prompt.png)
+![System Prompt](../img/system_prompt.png)
 
 Note that this message includes:
 - A clear definition of the assistant's **role and responsibilities** ("You are an AI assistant that supports a social media management team...")
@@ -50,7 +50,7 @@ Note that this message includes:
 
 ## Step 2: Testing the System Message with Multimodal Input
 
-Now that we configured the system prompt, let's test the system with a user prompt. Attach again the [same image](../../img/gh_copilot_slide.png) of the github copilot slide we used in the [previous section](./02_Model_Selection.md), and combine it with the following user prompt:
+Now that we configured the system prompt, let's test the system with a user prompt. Attach again the [same image](../img/gh_copilot_slide.png) of the github copilot slide we used in the [previous section](./02_Model_Selection.md), and combine it with the following user prompt:
 
 ```
 Create a short LinkedIn post about developer productivity with the tool illustrated in the attached image.
@@ -77,7 +77,7 @@ To add grounding data, we will use the **file attachment** feature in the Playgr
 The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `/workspace/data/` directory of your AITK environment, named `global_ai_community.docx`.
 
 1. Click the file attachment icon in the prompt input area.
-![File attachment icon](../../img/file_attachment_icon.png)
+![File attachment icon](../img/file_attachment_icon.png)
 2. Select the file `global_ai_community.docx` from the `/workspace/data/` directory.
 
 > [!TIP]
@@ -86,7 +86,7 @@ The document we are going to upload is a .docx file, containing information abou
 >/workspace/data/global_ai_community.docx
 > ```
 
-![Uploading Grounding Data File](../../img/uploading_grounding_data_file.png)
+![Uploading Grounding Data File](../img/uploading_grounding_data_file.png)
 
 3. Once the file is uploaded, it will appear as an attachment below the prompt input area.
 4. Enter the following prompt in the text field:

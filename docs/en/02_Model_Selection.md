@@ -8,7 +8,7 @@ In this section, you will explore the AI Toolkit Model Catalog to discover, filt
 2. Click on the AI Toolkit icon to open the extension panel
 3. Click on **Model Catalog** to browse available models
 
-![Model Catalog](../../img/model_catalog.png)
+![Model Catalog](../img/model_catalog.png)
 
 On the top of the page you'll find the most popular models; scroll down to see the full list of available models.
 
@@ -41,7 +41,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
    - **Mistral Small 3.1** is an optimized smaller model with faster response times and lower costs.
 2. Click **Add model** on each model tile to add them to your collection.
 
-![Add Model](../../img/add_model.png)
+![Add Model](../img/add_model.png)
 
 > [!NOTE]
 > Once they are added, the blue button will change to green with the label **Added**.
@@ -54,17 +54,17 @@ After applying filters, you'll see a refined list of models. For this exercise:
 >[!TIP]
 > Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
 
-![Model collection](../../img/model_collection.png)
+![Model collection](../img/model_collection.png)
 
 3. In the **Model** field, select one of the two GitHub-hosted models you added to your collection, for example **Mistral Small 3.1 (via GitHub)**. It will be loaded into the Playground automatically.
 
-![Model Playground](../../img/model_playground.png)
+![Model Playground](../img/model_playground.png)
 
 4. Next, click the **Compare** button to enable side-by-side comparison
 5. From the dropdown, select your second model (GPT-4.1 if Mistral Small 3.1 is already selected)
 6. You now have two models ready for comparison testing
 
-![Model Comparison](../../img/model_comparison.png)
+![Model Comparison](../img/model_comparison.png)
 
 ## Step 4: Test Text Generation and Multimodal Capabilities
 
@@ -79,7 +79,7 @@ Let's start interacting with the models with a simple prompt:
    ```
 2. Click the paper airplane icon to execute the prompt on both models simultaneously
 
-![Test the model](../../img/test_the_model.png)
+![Test the model](../img/test_the_model.png)
 
 Now, test the models' image processing capabilities:
 
@@ -90,13 +90,13 @@ Now, test the models' image processing capabilities:
 
 2. Click the image attachment icon to add a picture as input
 
-![Image Attachment](../../img/image_attachment.png)
+![Image Attachment](../img/image_attachment.png)
 
 3. Select an image file to upload. You'll be prompted with a text field with a default file path in your workspace directory. Replace it with the following:
    ```
    /workspace/img/gh_copilot_slide.png
    ```
-![Image File Path](../../img/image_file_path.png)
+![Image File Path](../img/image_file_path.png)
 
 4. Send the multimodal prompt on both models simultaneously.
 
@@ -123,14 +123,14 @@ Review the outputs from both models, using several factors to guide your evaluat
 > [!TIP]
 > Number of output tokens is visible in the response footer, along with characters length.
 
-![Token usage](../../img/token_usage.png)
+![Token usage](../img/token_usage.png)
 
 ## Step 6: Select a Model for Next Steps
 
 Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with **GPT-4.1**. 
 Click on **Select this model** on the right side of the model name.
 
-![Select this model](../../img/select_this_model.png)
+![Select this model](../img/select_this_model.png)
 
 ## Key Takeaways
 

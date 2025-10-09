@@ -9,7 +9,7 @@ In this section, you will learn how to create an AI agent with Agent Builder in 
 
 To access Agent Builder, in the AI Toolkit view, select **Agent Builder**.
 
-![Agent Builder](../../img/agent_builder.png)
+![Agent Builder](../img/agent_builder.png)
 
 Agent Builder's UI is organized into two sections. The left side of Agent Builder enables you to define the basic information for the agent such as its name, model choice, instructions, and any relevant tools. The right side of Agent Builder is where you can both chat with the agent and evaluate the agent's responses.
 
@@ -17,7 +17,7 @@ Agent Builder's UI is organized into two sections. The left side of Agent Builde
 
 In **Agent Builder** configure the new agent's basic information. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **OpenAI gpt-4.1 (via GitHub)** model.
 
-![Agent Basic Information](../../img/agent-basic-information.png)
+![Agent Basic Information](../img/agent-basic-information.png)
 
 ## Step 3: Provide Instructions for the Agent
 
@@ -25,7 +25,7 @@ Similarly to what we've previously done in the Model Playground, we'll now need 
 
 > [!TIP]
 > The Agent Builder provides a **Generate** feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.
-> ![Generate Agent Instruction](../../img/generate-agent-instruction.png)
+> ![Generate Agent Instruction](../img/generate-agent-instruction.png)
 
 For the sake of this exercise, we'll leverage a set of instructions similar to the one used in the previous section:
 
@@ -89,7 +89,7 @@ This project already includes the configuration to run the remote [Microsoft Lea
 
 To start the **Microsoft Learn** server, within your codespace, navigate to `.vscode/mcp.json`. Within the `mcp.json` file, locate the `Learn MCP Server` and click **Start** above the server.
 
-![Start Learn MCP Server](../../img/start-mcp-server.png)
+![Start Learn MCP Server](../img/start-mcp-server.png)
 
 > [!NOTE]
 > Once the server is started, you should see the status change to **Running**.
@@ -98,15 +98,15 @@ To start the **Microsoft Learn** server, within your codespace, navigate to `.vs
 
 Once the server is running, return to Agent Builder. In the **Tool** section, click on the **+** button and then select **MCP server**.
 
-![Add MCP Tool](../../img/add_mcp_server.png)
+![Add MCP Tool](../img/add_mcp_server.png)
 
 Next, select **Use tools added in Visual Studio Code**.
 
-![Use VS Code MCP Tools](../../img/use_vscode_mcp_tools.png)
+![Use VS Code MCP Tools](../img/use_vscode_mcp_tools.png)
 
 Make sure you have the `mcp_learn_mcp_ser_microsoft_docs_search` and `mcp_learn_mcp_ser_microsoft_docs_code_search` tools selected, then click **Ok**.
 
-![Select Learn MCP Tools](../../img/mcp_server_tools_list.png)
+![Select Learn MCP Tools](../img/mcp_server_tools_list.png)
 
 ## Step 5: Test tools integration
 
@@ -118,7 +118,7 @@ Create five short LinkedIn posts about the advantages of using AI tools from the
 
 In addition to the agent's response, you should see the details of the tool invocations within the chat area. Expand the details of the tool calls to see how the agent used the MCP tools to search for relevant Microsoft Learn documentation and code samples to ground its response.
 
-![Agent Tool Calls](../../img/agent_tools_call.png)
+![Agent Tool Calls](../img/agent_tools_call.png)
 
 ## Step 6: Extract the Agent's Code
 
@@ -127,7 +127,7 @@ In addition to the agent's response, you should see the details of the tool invo
 
 Once you have your agent prototype ready and tested, you can export it to code that can be integrated into your applications. To do this, simply click on the **View code** button at the bottom of the Agent Builder interface.
 
-![View Code](../../img/view_code.png)
+![View Code](../img/view_code.png)
 
 ## Key Takeaways
 

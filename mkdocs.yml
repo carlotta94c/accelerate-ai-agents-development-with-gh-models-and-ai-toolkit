@@ -12,12 +12,12 @@ copyright: >
   Copyright &copy; 2023 - present Microsoft
 
 nav:
-  - Home: 00_Introduction.md
-  - Getting Started: 01_Getting_Started.md
+  - Home: index.md
+  - Getting Started: 01_Get_Started.md
   - Model Selection: 02_Model_Selection.md
   - Model Augmentation: 03_Model_Augmentation.md
   - Agent Building: 04_Agent_Building.md
-  - Summary: summary.md
+  - Summary: 05_Summary.md
 
 plugins:
   - glightbox
