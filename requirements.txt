@@ -2,3 +2,4 @@
 mkdocs-material
 ruff
 black
+mkdocs-glightbox
