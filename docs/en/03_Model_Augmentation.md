@@ -48,7 +48,7 @@ Note that this message includes:
 Now that we configured the system prompt, let's test the system with a user prompt. Attach again the [same image](../../img/gh_copilot_slide.png) of the github copilot slide we used in the [previous section](./02_Model_Selection.md), and combine it with the following user prompt:
 
 ```
-Create a short LinkedIn post about the Global AI Community and its activites.
+Create a short LinkedIn post about developer productivity with the tool illustrated in the attached image.
 ```
 
 The model will analyze the image and provides a suggestion for a LinkedIn post that aligns with the user's request and the guidelines set in the system message. Note how there's no reference to GitHub Copilot in the system message or the user prompt, yet the model is able to identify the tool in the image and incorporate it into the response.

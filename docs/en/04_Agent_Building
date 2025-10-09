@@ -1,0 +1,70 @@
+# Agent Building: Building an AI Agent with Agent Builder
+
+In this section, you will learn how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools, enabling it to take actions on behalf of the user. Agent Builder streamlines the engineering workflow for building agents, including prompt engineering and integration with tools, such as MCP servers.
+
+> [!TIP]
+> [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
+
+## Step 1: Explore Agent Builder
+
+To access Agent Builder, in the AI Toolkit view, select **Agent Builder**.
+
+![Agent Builder](../../img/agent-builder.png)
+
+Agent Builder's UI is organized into two sections. The left side of Agent Builder enables you to define the basic information for the agent such as its name, model choice, instructions, and any relevant tools. The right side of Agent Builder is where you can both chat with the agent and evaluate the agent's responses.
+
+## Step 2: Create the Agent
+
+In **Agent Builder** select **+ New Agent**. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **gpt-4-mini (via GitHub)** model.
+
+![Agent Basic Information](../../img/agent-basic-information.png)
+
+## Step 3: Provide Instructions for the Agent
+
+Similarly to what we've previously done in the Model Playground, we'll now need to define the behavior of the agent, through the system prompt. Agent Builder provides a **Generate** feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.
+
+![Generate Agent Instruction](../../img/generate-agent-instruction.png)
+
+For the sake of this exercise, we'll leverage the same instructions used in the previous section: :
+
+```
+You are an intelligent and friendly AI assistant that supports a social media management team creating content targeted to a developer audience, on different channels and format.
+
+Your role is to:
+- Engage with the users in natural conversation to understand their communication goals.
+- Ask thoughtful questions to gather relevant project details.
+- Be brief in your responses.
+Your personality is:
+- Warm and welcoming, like a helpful colleague.
+- Professional and knowledgeable, like a seasoned social media expert.
+- Curious and conversational—never assume, always clarify.
+
+Content Formats:
+- Blog: Informative or narrative articles, structured with an introduction, body, and conclusion.
+- Video Script: Text for videos, including directions for scenes, dialogues, and actions.
+- Post Captions: Short and catchy texts to accompany images or videos on social media.
+
+Stick to the scenario described above. If the user asks something outside of that, politely let them know you can only assist with social media content creation strategy.
+```
+
+## Step 4: Add Tools to the Agent
+
+### Microsoft Learn Search tools
+
+Earlier in the **Model Augmentation** exercise, we added grounding data to the model in the form of a .docx file attachment. While that may have been convenient for the sake of testing the base model prior to model selection, what we'd recommend is to ground the agent with data in such a way that's scalable to larger datasets and always up-to-date information.
+
+To achieve this, we can use the **Model Context Protocol (MCP)** server to provide the agent with access to relevant data sources. This allows the agent to retrieve up-to-date information and context as needed. The retrieval of relevant information is handled automatically by the MCP server, which communicates with the agent via the MCP standard, so that the agent can focus on generating responses based on the most relevant and current data.
+
+This project already includes the configuration to run the remote [Microsoft Learn MCP server](https://github.com/microsoftdocs/mcp), which exposes search tools to query the [Microsoft Learn](https://learn.microsoft.com/) documentation and search for official Microsoft/Azure code samples.
+
+To start the **Microsoft Learn** server, within your codespace, navigate to `.vscode/mcp.json`. Within the `mcp.json` file, locate the `Learn MCP Server` and click **Start** above the server.
+
+### File system write tool
+
+## Key Takeaways
+
+- TBD
+- TBD
+- TBD
+
+Click **Next** to proceed to the following section of the lab.

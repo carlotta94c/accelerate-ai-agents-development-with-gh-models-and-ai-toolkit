@@ -51,7 +51,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
 1. Click on **Playground** in the AI Toolkit panel. The Playground allows you to test and compare models interactively.
 2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
 
->![TIP]
+>[!TIP]
 > Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
 
 ![Model collection](../../img/model_collection.png)
