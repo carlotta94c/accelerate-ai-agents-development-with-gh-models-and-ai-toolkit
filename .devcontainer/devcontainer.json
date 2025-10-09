@@ -22,9 +22,6 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		"codespaces": {
-			"openFiles": [
-			  "src/python-app/webapp/main.py",
-			]
 		},
 		"vscode": {
 			"settings": {
@@ -36,8 +33,7 @@
 			  }
 			},
 			"extensions": [
-			  "ms-python.python",
-			  "ms-python.vscode-pylance",
+			  "ms-windows-ai-studio.windows-ai-studio",
 			  "GitHub.copilot"
 			]
 		}
