@@ -1,7 +1,7 @@
 # Introduction
 
-> [!NOTE]
-> This workshop will give you hand-on experience with the AI Toolkit (AITK) and Azure AI Foundry in Visual Studio Code to prototype multimodal agents for your business scenario.
+!!! note
+	This workshop will give you hand-on experience with the AI Toolkit (AITK) and Azure AI Foundry in Visual Studio Code to prototype multimodal agents for your business scenario.
 
 ## Learning Objectives
 

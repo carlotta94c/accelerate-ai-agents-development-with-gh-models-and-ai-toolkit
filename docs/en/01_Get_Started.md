@@ -1,7 +1,7 @@
 # Get started
 
-> [!TIP]
-> What is the **Azure AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Azure AI Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
+!!! tip
+    What is the **Azure AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Azure AI Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
 
 ## Open workshop in a GitHub Codespace
 
@@ -11,8 +11,8 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
 
 2. To launch a codespace, you need a **GitHub account**.
 
-    > [!NOTE]
-    > If you already have a GitHub account, you can move to step 3 directly.
+    !!! note
+        If you already have a GitHub account, you can move to step 3 directly.
 
     To create one, click on the **Sign up** button and follow the instructions below:
     - In the new window, enter a personal email address, create a password, and choose a username.
@@ -42,8 +42,8 @@ In the GitHub Codespace, you should be able to see - among the Visual Studio Cod
 
 ![Installed extensions](../img/installed_extensions.png)
 
-> [!TIP]
-> If you don't see the extension icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
+!!! tip
+    If you don't see the extension icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
 
 ## Ready to start
 

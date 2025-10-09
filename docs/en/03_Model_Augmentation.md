@@ -80,11 +80,12 @@ The document we are going to upload is a .docx file, containing information abou
 ![File attachment icon](../img/file_attachment_icon.png)
 2. Select the file `global_ai_community.docx` from the `/workspace/data/` directory.
 
-> [!TIP]
-> In the text field that appears, you can enter the following path to the file:
-> ```
->/workspace/data/global_ai_community.docx
-> ```
+!!! tip
+	In the text field that appears, you can enter the following path to the file:
+
+	```
+	/workspace/data/global_ai_community.docx
+	```
 
 ![Uploading Grounding Data File](../img/uploading_grounding_data_file.png)
 

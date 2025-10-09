@@ -2,8 +2,8 @@
 
 In this section, you will learn how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools, enabling it to take actions on behalf of the user. Agent Builder streamlines the engineering workflow for building agents, including prompt engineering and integration with tools, such as MCP servers.
 
-> [!TIP]
-> [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
+!!! tip
+   [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
 
 ## Step 1: Explore Agent Builder
 
@@ -23,9 +23,10 @@ In **Agent Builder** configure the new agent's basic information. Within the **A
 
 Similarly to what we've previously done in the Model Playground, we'll now need to define the behavior of the agent, through the system prompt. 
 
-> [!TIP]
-> The Agent Builder provides a **Generate** feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.
-> ![Generate Agent Instruction](../img/generate-agent-instruction.png)
+!!! tip
+   The Agent Builder provides a **Generate** feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.
+
+   ![Generate Agent Instruction](../img/generate-agent-instruction.png)
 
 For the sake of this exercise, we'll leverage a set of instructions similar to the one used in the previous section:
 
@@ -91,8 +92,8 @@ To start the **Microsoft Learn** server, within your codespace, navigate to `.vs
 
 ![Start Learn MCP Server](../img/start-mcp-server.png)
 
-> [!NOTE]
-> Once the server is started, you should see the status change to **Running**.
+!!! note
+   Once the server is started, you should see the status change to **Running**.
 
 ### Add search tools to the agent
 
@@ -122,8 +123,8 @@ In addition to the agent's response, you should see the details of the tool invo
 
 ## Step 6: Extract the Agent's Code
 
-> [!NOTE]
-> Agent evaluation is a crucial step in the agent development process, prior to deployment. It allows you to assess the agent's performance, identify areas for improvement, and ensure that it meets the desired objectives. This lab is not going to cover agent evaluation in detail, but you can learn more about it in the [official documentation](https://code.visualstudio.com/docs/intelligentapps/evaluation).
+!!! note
+   Agent evaluation is a crucial step in the agent development process, prior to deployment. It allows you to assess the agent's performance, identify areas for improvement, and ensure that it meets the desired objectives. This lab is not going to cover agent evaluation in detail, but you can learn more about it in the [official documentation](https://code.visualstudio.com/docs/intelligentapps/evaluation).
 
 Once you have your agent prototype ready and tested, you can export it to code that can be integrated into your applications. To do this, simply click on the **View code** button at the bottom of the Agent Builder interface.
 

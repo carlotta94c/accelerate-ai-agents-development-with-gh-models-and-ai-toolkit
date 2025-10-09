@@ -19,8 +19,8 @@ Since the list is quite consistent, you can use the filtering options to narrow 
 1. Click on the **Hosted by** filter dropdown. You have several options, such as GitHub, Azure AI Foundry, OpenAI and you can even leverage models hosted on your local infrastructure, through Ollama or ONNX.
 2. Select **GitHub** to view free-to-use models that are excellent for prototyping.
 
-> [!NOTE]
-> GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Azure AI Foundry.
+!!! note
+   GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Azure AI Foundry.
 
 ### Filter by Model Features
 
@@ -43,16 +43,16 @@ After applying filters, you'll see a refined list of models. For this exercise:
 
 ![Add Model](../img/add_model.png)
 
-> [!NOTE]
-> Once they are added, the blue button will change to green with the label **Added**.
+!!! note
+   Once they are added, the blue button will change to green with the label **Added**.
 
 ## Step 3: Open the Playground for Testing
 
 1. Click on **Playground** in the AI Toolkit panel. The Playground allows you to test and compare models interactively.
 2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
 
->[!TIP]
-> Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
+!!! tip
+   Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
 
 ![Model collection](../img/model_collection.png)
 
@@ -68,8 +68,8 @@ After applying filters, you'll see a refined list of models. For this exercise:
 
 ## Step 4: Test Text Generation and Multimodal Capabilities
 
-> [!TIP]
-> The side-by-side comparison allows you to see exactly how different models handle the same input, making it easier to choose the best fit for your specific use case.
+!!! tip
+   The side-by-side comparison allows you to see exactly how different models handle the same input, making it easier to choose the best fit for your specific use case.
 
 Let's start interacting with the models with a simple prompt:
 
@@ -120,8 +120,8 @@ Review the outputs from both models, using several factors to guide your evaluat
 - **Output Formatting**: Evaluate clarity and organization of responses, as well as verbosity.
 - **Token Usage**: Inspect the token usage for each model to understand cost implications. Note that token usage may vary not only based on the verbosity of the response but also on the tokenizer efficiency of each model.
 
-> [!TIP]
-> Number of output tokens is visible in the response footer, along with characters length.
+!!! tip
+   Number of output tokens is visible in the response footer, along with characters length.
 
 ![Token usage](../img/token_usage.png)
 
