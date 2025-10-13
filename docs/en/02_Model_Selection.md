@@ -20,7 +20,7 @@ Since the list is quite consistent, you can use the filtering options to narrow 
 2. Select **GitHub** to view free-to-use models that are excellent for prototyping.
 
 !!! note
-   GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Azure AI Foundry.
+    GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Azure AI Foundry.
 
 ### Filter by Model Features
 
@@ -44,7 +44,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
 ![Add Model](../img/add_model.png)
 
 !!! note
-   Once they are added, the blue button will change to green with the label **Added**.
+    Once they are added, the blue button will change to green with the label **Added**.
 
 ## Step 3: Open the Playground for Testing
 
@@ -52,7 +52,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
 2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
 
 !!! tip
-   Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
+    Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
 
 ![Model collection](../img/model_collection.png)
 
@@ -69,7 +69,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
 ## Step 4: Test Text Generation and Multimodal Capabilities
 
 !!! tip
-   The side-by-side comparison allows you to see exactly how different models handle the same input, making it easier to choose the best fit for your specific use case.
+    The side-by-side comparison allows you to see exactly how different models handle the same input, making it easier to choose the best fit for your specific use case.
 
 Let's start interacting with the models with a simple prompt:
 
@@ -94,7 +94,7 @@ Now, test the models' image processing capabilities:
 
 3. Select an image file to upload. You'll be prompted with a text field with a default file path in your workspace directory. Replace it with the following:
    ```
-   /workspace/img/gh_copilot_slide.png
+   /workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/img/gh_copilot_slide.png
    ```
 ![Image File Path](../img/image_file_path.png)
 
@@ -121,7 +121,7 @@ Review the outputs from both models, using several factors to guide your evaluat
 - **Token Usage**: Inspect the token usage for each model to understand cost implications. Note that token usage may vary not only based on the verbosity of the response but also on the tokenizer efficiency of each model.
 
 !!! tip
-   Number of output tokens is visible in the response footer, along with characters length.
+    Number of output tokens is visible in the response footer, along with characters length.
 
 ![Token usage](../img/token_usage.png)
 

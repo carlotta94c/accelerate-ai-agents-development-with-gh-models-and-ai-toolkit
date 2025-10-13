@@ -40,9 +40,13 @@ Your personality is:
 - Stick to the scenario above. If something falls outside social media content creation, respond to the user politely with your scope limits.
 ```
 
+!!! note
+    The model preference panel also includes some model parameters you can adjust to further refine the model's behavior, such as the max length of the response - **Max Response Tokens** - and the degree of randomness in the output - **Temperature** and **Top P**. For this exercise, you can leave them to their default values.
+
 ![System Prompt](../img/system_prompt.png)
 
 Note that this message includes:
+
 - A clear definition of the assistant's **role and responsibilities** ("You are an AI assistant that supports a social media management team...")
 - Specific instructions on **how to interact with users** and what to focus on (e.g., "Engage with the users in natural conversation...")
 - Guidelines on **tone and style** to ensure consistent and appropriate responses (e.g., "Warm and welcoming, like a helpful colleague...")
@@ -74,17 +78,17 @@ For our use case, we are going to provide the model with some context about the 
 
 To add grounding data, we will use the **file attachment** feature in the Playground. This allows us to upload documents that the model can reference when generating responses.
 
-The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `/workspace/data/` directory of your AITK environment, named `global_ai_community.docx`.
+The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `data` folder of your AITK environment, named `global_ai_community.docx`.
 
 1. Click the file attachment icon in the prompt input area.
 ![File attachment icon](../img/file_attachment_icon.png)
-2. Select the file `global_ai_community.docx` from the `/workspace/data/` directory.
+2. Select the file `global_ai_community.docx` from the `/workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/data` directory.
 
 !!! tip
 	In the text field that appears, you can enter the following path to the file:
 
 	```
-	/workspace/data/global_ai_community.docx
+	/workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/data/global_ai_community.docx
 	```
 
 ![Uploading Grounding Data File](../img/uploading_grounding_data_file.png)

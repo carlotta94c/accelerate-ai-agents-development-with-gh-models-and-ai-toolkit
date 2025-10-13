@@ -7,7 +7,7 @@
 
 In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hosted development environment with all the necessary tools and dependencies pre-installed. This will allow you to focus on learning and prototyping without worrying about local setup.
 
-1. Open the browser and navigate to the [GitHub repo](https://aka.ms/msignite25-lab512) hosting the lab assets.
+1. Open the browser and navigate to the [GitHub repo](https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit) hosting the lab assets.
 
 2. To launch a codespace, you need a **GitHub account**.
 
@@ -15,6 +15,7 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
         If you already have a GitHub account, you can move to step 3 directly.
 
     To create one, click on the **Sign up** button and follow the instructions below:
+
     - In the new window, enter a personal email address, create a password, and choose a username.
     - Select your Country/Region and agree to the terms of service.
     - Click on the **Create account** button and wait for the verification email to arrive in your inbox.
