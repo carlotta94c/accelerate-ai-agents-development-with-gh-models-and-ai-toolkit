@@ -9,6 +9,9 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
 
 1. Open the browser and navigate to the [GitHub repo](https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit) hosting the lab assets.
 
+!!! tip
+    Click the Star button in the top right corner, this will help you easily find it later.
+
 2. To launch a codespace, you need a **GitHub account**.
 
     !!! note
