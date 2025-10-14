@@ -94,7 +94,7 @@ Now, test the models' image processing capabilities:
 
 3. Select an image file to upload. You'll be prompted with a text field with a default file path in your workspace directory. Replace it with the following:
    ```
-   /workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/img/gh_copilot_slide.png
+   /workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/docs/img/gh_copilot_slide.png
    ```
 ![Image File Path](../img/image_file_path.png)
 
