@@ -40,6 +40,9 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
 
     ![Open in VS Code](../img/open_in_vscode.png)
 
+!!! warning
+    If you move to VS Code Desktop App, make sure the Github account you are logged in within VS Code is the same you used to create the GitHub Codespace.
+
 ## Verify AI Toolkit extension is installed
 
 In the GitHub Codespace, you should be able to see - among the Visual Studio Code extensions already installed - the **AI Toolkit**. This is the extension we will be using to interact with various AI models and services in this lab.
