@@ -48,7 +48,7 @@ After applying filters, you'll see a refined list of models. For this exercise:
 
 ## Step 3: Open the Playground for Testing
 
-1. Click on **Playground** in the AI Toolkit panel. The Playground allows you to test and compare models interactively.
+1. Click on **Model Playground** in the AI Toolkit panel. The Playground allows you to test and compare models interactively.
 2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
 
 !!! tip
