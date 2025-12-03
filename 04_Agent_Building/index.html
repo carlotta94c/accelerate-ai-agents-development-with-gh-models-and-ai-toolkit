@@ -1,0 +1,909 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how to accelerate the development of AI agents using GitHub models and the AI toolkit in VS Code.">
+      
+      
+        <meta name="author" content="Carlotta Castelluccio">
+      
+      
+      
+        <link rel="prev" href="../03_Model_Augmentation/">
+      
+      
+        <link rel="next" href="../05_Migrate_to_code/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Agent Building - Accelerate AI Agents Development with GitHub Models and AI Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agent-building-building-an-ai-agent-with-agent-builder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Accelerate AI Agents Development with GitHub Models and AI Toolkit" class="md-header__button md-logo" aria-label="Accelerate AI Agents Development with GitHub Models and AI Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Accelerate AI Agents Development with GitHub Models and AI Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agent Building
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Accelerate AI Agents Development with GitHub Models and AI Toolkit" class="md-nav__button md-logo" aria-label="Accelerate AI Agents Development with GitHub Models and AI Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Get_Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Model_Selection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_Model_Augmentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Augmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Building
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Building
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-explore-agent-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Explore Agent Builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-provide-instructions-for-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Provide Instructions for the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-tools-to-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Tools to the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-test-tools-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Test tools integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Migrate_to_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate To Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Bonus_Evaluations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus Evaluations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-explore-agent-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Explore Agent Builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Create the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-provide-instructions-for-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Provide Instructions for the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-tools-to-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Tools to the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-test-tools-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Test tools integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="agent-building-building-an-ai-agent-with-agent-builder">Agent Building: Building an AI Agent with Agent Builder<a class="headerlink" href="#agent-building-building-an-ai-agent-with-agent-builder" title="Permanent link">&para;</a></h1>
+<p>In this section, you will learn how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools, enabling it to take actions on behalf of the user. Agent Builder streamlines the engineering workflow for building agents, including prompt engineering and integration with tools, such as MCP servers.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://modelcontextprotocol.io/docs/getting-started/intro">Model Context Protocol (MCP)</a> is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.</p>
+</div>
+<h2 id="step-1-explore-agent-builder">Step 1: Explore Agent Builder<a class="headerlink" href="#step-1-explore-agent-builder" title="Permanent link">&para;</a></h2>
+<p>To access Agent Builder, in the AI Toolkit view, select <strong>Agent Builder</strong>.</p>
+<p><a class="glightbox" href="../img/agent_builder.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Builder" src="../img/agent_builder.png" /></a></p>
+<p>Agent Builder's UI is organized into two sections. The left side of Agent Builder enables you to define the basic information for the agent such as its name, model choice, instructions, and any relevant tools. The right side of Agent Builder is where you can both chat with the agent and evaluate the agent's responses.</p>
+<h2 id="step-2-create-the-agent">Step 2: Create the Agent<a class="headerlink" href="#step-2-create-the-agent" title="Permanent link">&para;</a></h2>
+<p>In <strong>Agent Builder</strong> configure the new agent's basic information. Within the <strong>Agent name</strong> field, enter <strong>Social Media Manager</strong>. For the agent's <strong>Model</strong>, select the <strong>OpenAI gpt-4.1 (via GitHub)</strong> model.</p>
+<p><a class="glightbox" href="../img/agent-basic-information.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Basic Information" src="../img/agent-basic-information.png" /></a></p>
+<h2 id="step-3-provide-instructions-for-the-agent">Step 3: Provide Instructions for the Agent<a class="headerlink" href="#step-3-provide-instructions-for-the-agent" title="Permanent link">&para;</a></h2>
+<p>Similarly to what we've previously done in the Model Playground, we'll now need to define the behavior of the agent, through the system prompt. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The Agent Builder provides a <strong>Generate</strong> feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.</p>
+</div>
+<p><a class="glightbox" href="../img/generate-agent-instruction.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Generate Agent Instruction" src="../img/generate-agent-instruction.png" /></a></p>
+<p>For the sake of this exercise, we'll leverage a set of instructions similar to the one used in the previous section:</p>
+<div class="highlight"><pre><span></span><code>You are an intelligent and friendly AI assistant that supports a social media management team creating content targeted to a developer audience, on different channels and formats.
+
+# Task
+Your role is to:
+- Engage with users in natural conversation to understand their social media content creation goals.
+- Ask thoughtful questions to gather relevant project details.
+- Be brief in your responses.
+
+Content Formats:
+- Blog: Informative or narrative articles, structured with an introduction, body, and conclusion.
+- Video Script: Text for videos, including directions for scenes, dialogues, and actions.
+- Post Captions: Short and catchy texts to accompany images or videos on social media.
+
+# Personality
+Your personality is:
+- Warm and welcoming, like a helpful colleague.
+- Professional and knowledgeable, like a seasoned social media expert.
+- Curious and conversational—never assume, always clarify.
+
+# Steps
+Think step-by-step:
+1. Analyze the user&#39;s query to determine if it requests content about Microsoft technologies or tools.
+2. If YES:
+   - Plan what information is needed and select the appropriate MCP learn server tools to gather Microsoft documentation.
+   - Use &quot;mcp_learn_mcp_ser_microsoft_docs_search&quot; to identify relevant official Microsoft sources.
+   - If highly valuable/relevant pages emerge, follow up with &quot;mcp_learn_mcp_ser_microsoft_docs_fetch&quot; to retrieve the full content.
+   - Persist in using these tools until the answer is factually grounded and complete. Only terminate your turn when the problem is solved.
+   - DO NOT guess, invent, or proceed without tool results. Use your tools to learn any missing details.
+3. If NO:
+   - Proceed with general content creation and strategy for developer audiences, as specified by user.
+4. If the user asks for something outside social media content strategy, politely inform them you cannot assist outside of social media content creation.
+
+# Tool Use Guidelines
+- Always use MCP learn server tools (&quot;docs_search&quot;, &quot;docs_fetch&quot;) for Microsoft tech topics to ground your response.
+- Never guess or fabricate information about Microsoft technologies or tools.
+- If unsure about any details, always use the server tools to find out. Do not rely on assumptions.
+- Continue querying and planning with tools until your answer is fully supported and grounded.
+- Only finish your turn when the user’s query is fully resolved and content is complete.
+
+# Guardrails
+- Stick to the scenario above. If something falls outside social media content creation, respond to the user politely with your scope limits.
+</code></pre></div>
+<p>Note how we added a couple of new sections to the instructions:</p>
+<ul>
+<li>A <strong>Steps</strong> section that guides the agent on how to approach user queries, including when and how to use the MCP tools.</li>
+<li>A <strong>Tool Use Guidelines</strong> section that provides specific rules for using the MCP tools effectively.</li>
+</ul>
+<p>In the next section, we'll cover more about the MCP server cited in the instructions and how to let our Social Media manager agent access its tools.</p>
+<h2 id="step-4-add-tools-to-the-agent">Step 4: Add Tools to the Agent<a class="headerlink" href="#step-4-add-tools-to-the-agent" title="Permanent link">&para;</a></h2>
+<h3 id="start-the-microsoft-learn-mcp-server">Start the Microsoft Learn MCP server<a class="headerlink" href="#start-the-microsoft-learn-mcp-server" title="Permanent link">&para;</a></h3>
+<p>Earlier in the <strong>Model Augmentation</strong> exercise, we added grounding data to the model in the form of a .docx file attachment. While that may have been convenient for the sake of testing the base model prior to model selection, what we'd recommend is to ground the agent with data in such a way that's scalable to larger datasets and always up-to-date information.</p>
+<p>To achieve this, we can use the <strong>Model Context Protocol (MCP)</strong> server to provide the agent with access to relevant data sources. This allows the agent to retrieve up-to-date information and context as needed. The retrieval of relevant information is handled automatically by the MCP server, which communicates with the agent via the MCP standard, so that the agent can focus on generating responses based on the most relevant and current data.</p>
+<p>This project already includes the configuration to run the remote <a href="https://github.com/microsoftdocs/mcp">Microsoft Learn MCP server</a>, which exposes search tools to query the <a href="https://learn.microsoft.com/">Microsoft Learn</a> documentation and search for official Microsoft/Azure code samples.</p>
+<p>To start the <strong>Microsoft Learn</strong> server, , within your Visual Studio Code workspace, go to <strong>Explorer</strong> from the side bar menu, navigate to <code>.vscode/mcp.json</code>. Within the <code>mcp.json</code> file, locate the <code>Learn MCP Server</code> and click <strong>Start</strong> above the server.</p>
+<p><a class="glightbox" href="../img/start-mcp-server.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Start Learn MCP Server" src="../img/start-mcp-server.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once the server is started, you should see the status change to <strong>Running</strong>.</p>
+</div>
+<h3 id="add-search-tools-to-the-agent">Add search tools to the agent<a class="headerlink" href="#add-search-tools-to-the-agent" title="Permanent link">&para;</a></h3>
+<p>Once the server is running, return to Agent Builder. In the <strong>Tool</strong> section, click on the <strong>+</strong> button and then select <strong>MCP server</strong>.</p>
+<p><a class="glightbox" href="../img/add_mcp_server.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add MCP Tool" src="../img/add_mcp_server.png" /></a></p>
+<p>Next, select <strong>Use tools added in Visual Studio Code</strong>.</p>
+<p><a class="glightbox" href="../img/use_vscode_mcp_tools.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Use VS Code MCP Tools" src="../img/use_vscode_mcp_tools.png" /></a></p>
+<p>Make sure you have the <code>mcp_learn_mcp_ser_microsoft_docs_search</code> and <code>mcp_learn_mcp_ser_microsoft_docs_code_search</code> tools selected, then click <strong>Ok</strong>.</p>
+<p><a class="glightbox" href="../img/mcp_server_tools_list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select Learn MCP Tools" src="../img/mcp_server_tools_list.png" /></a></p>
+<h2 id="step-5-test-tools-integration">Step 5: Test tools integration<a class="headerlink" href="#step-5-test-tools-integration" title="Permanent link">&para;</a></h2>
+<p>Now that the tools have been added to the agent, let's test them out. In the playground input area - where you see the placeholder <code>Type a message.</code>, enter the following prompt:</p>
+<div class="highlight"><pre><span></span><code>Create five short LinkedIn posts about the advantages of using AI tools from the Microsoft ecosystem for developer productivity.
+</code></pre></div>
+<p>In addition to the agent's response, you should see the details of the tool invocations within the chat area. Expand the details of the tool calls to see how the agent used the MCP tools to search for relevant Microsoft Learn documentation and code samples to ground its response.</p>
+<p><a class="glightbox" href="../img/agent_tools_call.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Agent Tool Calls" src="../img/agent_tools_call.png" /></a></p>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<p>In this section, you learned how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools via Model Context Protocol (MCP). You leveraged the Microsoft Learn MCP server to provide the agent with access to relevant data - the Microsoft official docs, allowing it to retrieve up-to-date information and context as needed.</p>
+<p>Click <strong>Next</strong> to proceed to the following section of the lab.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03_Model_Augmentation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Model Augmentation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Model Augmentation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05_Migrate_to_code/" class="md-footer__link md-footer__link--next" aria-label="Next: Migrate To Code">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Migrate To Code
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - present Microsoft
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.footer", "content.code.copy", "navigation.tabs.sticky", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,988 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how to accelerate the development of AI agents using GitHub models and the AI toolkit in VS Code.">
+      
+      
+        <meta name="author" content="Carlotta Castelluccio">
+      
+      
+      
+        <link rel="prev" href="../01_Get_Started/">
+      
+      
+        <link rel="next" href="../03_Model_Augmentation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Model Selection - Accelerate AI Agents Development with GitHub Models and AI Toolkit</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#model-selection-exploring-the-ai-toolkit-model-catalog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Accelerate AI Agents Development with GitHub Models and AI Toolkit" class="md-header__button md-logo" aria-label="Accelerate AI Agents Development with GitHub Models and AI Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Accelerate AI Agents Development with GitHub Models and AI Toolkit
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Model Selection
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="cyan"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Accelerate AI Agents Development with GitHub Models and AI Toolkit" class="md-nav__button md-logo" aria-label="Accelerate AI Agents Development with GitHub Models and AI Toolkit" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/carlotta94c/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Accelerate AI Agents Development with GitHub Models and AI Toolkit
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Get_Started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Selection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-apply-filters-to-narrow-your-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Apply Filters to Narrow Your Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-models-to-your-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Add Models to Your Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-open-the-playground-for-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Open the Playground for Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-test-text-generation-and-multimodal-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Test Text Generation and Multimodal Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-analyze-and-compare-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Analyze and Compare Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-select-a-model-for-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Select a Model for Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_Model_Augmentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Augmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Agent_Building/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Building
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Migrate_to_code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrate To Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Bonus_Evaluations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bonus Evaluations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-apply-filters-to-narrow-your-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Apply Filters to Narrow Your Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-models-to-your-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Add Models to Your Collection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-open-the-playground-for-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Open the Playground for Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-test-text-generation-and-multimodal-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Test Text Generation and Multimodal Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-analyze-and-compare-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Analyze and Compare Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-select-a-model-for-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Select a Model for Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="model-selection-exploring-the-ai-toolkit-model-catalog">Model Selection: Exploring the AI Toolkit Model Catalog<a class="headerlink" href="#model-selection-exploring-the-ai-toolkit-model-catalog" title="Permanent link">&para;</a></h1>
+<p>In this section, you will explore the AI Toolkit Model Catalog to discover, filter, and compare models for your multimodal agent project. The Model Catalog provides access to models from various providers including GitHub, Microsoft Foundry, OpenAI, and others.</p>
+<h2 id="step-1-apply-filters-to-narrow-your-selection">Step 1: Apply Filters to Narrow Your Selection<a class="headerlink" href="#step-1-apply-filters-to-narrow-your-selection" title="Permanent link">&para;</a></h2>
+<ol>
+<li>In your Codespace, locate the <strong>AI Toolkit</strong> extension icon in the left sidebar</li>
+<li>Click on the AI Toolkit icon to open the extension panel</li>
+<li>Click on <strong>Model Catalog</strong> to browse available models</li>
+</ol>
+<p><a class="glightbox" href="../img/model_catalog.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Model Catalog" src="../img/model_catalog.png" /></a></p>
+<p>On the top of the page you'll find the most popular models; scroll down to see the full list of available models.</p>
+<p>Since the list is quite consistent, you can use the filtering options to narrow down the selection based on your requirements.</p>
+<h3 id="filter-by-hosting-provider">Filter by Hosting Provider<a class="headerlink" href="#filter-by-hosting-provider" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click on the <strong>Hosted by</strong> filter dropdown. You have several options, such as GitHub, Microsoft Foundry, OpenAI and you can even leverage models hosted on your local infrastructure, through Ollama or ONNX.</li>
+<li>Select <strong>GitHub</strong> to view free-to-use models that are excellent for prototyping.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Microsoft Foundry.</p>
+</div>
+<h3 id="filter-by-model-features">Filter by Model Features<a class="headerlink" href="#filter-by-model-features" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click on the <strong>Feature</strong> filter dropdown to filter by model capabilities, such as image/audio or video processing, tool calling, etc.</li>
+<li>Select <strong>Image Attachment</strong> to find multimodal models that support visual input processing and enables multimodal interactions combining text and images.</li>
+</ol>
+<h3 id="filter-by-publisher">Filter by Publisher<a class="headerlink" href="#filter-by-publisher" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click on the <strong>Publisher</strong> filter dropdown to filter by the model publisher, such as Microsoft, Meta, Cohere, etc. Note that you can find both open-source and proprietary models.</li>
+<li>Select <strong>OpenAI</strong> and <strong>Mistral AI</strong> to view models from these two leading providers.</li>
+</ol>
+<h2 id="step-2-add-models-to-your-collection">Step 2: Add Models to Your Collection<a class="headerlink" href="#step-2-add-models-to-your-collection" title="Permanent link">&para;</a></h2>
+<p>After applying filters, you'll see a refined list of models. For this exercise:</p>
+<ol>
+<li>Locate the <strong>GPT-4.1</strong> and <strong>Mistral Small 3.1</strong> models in the filtered results.</li>
+<li><strong>GPT-4.1</strong> is a full-featured multimodal model with comprehensive capabilities</li>
+<li><strong>Mistral Small 3.1</strong> is an optimized smaller model with faster response times and lower costs.</li>
+<li>Click <strong>Add model</strong> on each model tile to add them to your collection.</li>
+</ol>
+<p><a class="glightbox" href="../img/add_model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Add Model" src="../img/add_model.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Once they are added, the blue button will change to green with the label <strong>Added</strong>.</p>
+</div>
+<h2 id="step-3-open-the-playground-for-testing">Step 3: Open the Playground for Testing<a class="headerlink" href="#step-3-open-the-playground-for-testing" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click on <strong>Model Playground</strong> in the AI Toolkit panel. The Playground allows you to test and compare models interactively.</li>
+<li>You'll be prompted to login to your GitHub account to access the free-tier models. Click <strong>Allow</strong> and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'. If you don't see them, click on the refresh icon to update the view.</p>
+</div>
+<p><a class="glightbox" href="../img/model_collection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Model collection" src="../img/model_collection.png" /></a></p>
+<ol>
+<li>In the <strong>Model</strong> field, select one of the two GitHub-hosted models you added to your collection, for example <strong>Mistral Small 3.1 (via GitHub)</strong>. It will be loaded into the Playground automatically.</li>
+</ol>
+<p><a class="glightbox" href="../img/model_playground.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Model Playground" src="../img/model_playground.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You might experience some delay in model loading, especially if it's your first time accessing the Playground. Please be patient while the model initializes.</p>
+</div>
+<ol>
+<li>Next, click the <strong>Compare</strong> button to enable side-by-side comparison</li>
+<li>From the dropdown, select your second model (GPT-4.1 if Mistral Small 3.1 is already selected)</li>
+<li>You now have two models ready for comparison testing</li>
+</ol>
+<p><a class="glightbox" href="../img/model_comparison.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Model Comparison" src="../img/model_comparison.png" /></a></p>
+<h2 id="step-4-test-text-generation-and-multimodal-capabilities">Step 4: Test Text Generation and Multimodal Capabilities<a class="headerlink" href="#step-4-test-text-generation-and-multimodal-capabilities" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The side-by-side comparison allows you to see exactly how different models handle the same input, making it easier to choose the best fit for your specific use case.</p>
+</div>
+<p>Let's start interacting with the models with a simple prompt:</p>
+<ol>
+<li>Enter this prompt in the text field (where you see the placeholder "Type a prompt"):
+   <div class="highlight"><pre><span></span><code>Create a short LinkedIn post about developer productivity with AI tools.
+</code></pre></div></li>
+<li>Click the paper airplane icon to execute the prompt on both models simultaneously</li>
+</ol>
+<p><a class="glightbox" href="../img/test_the_model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Test the model" src="../img/test_the_model.png" /></a></p>
+<p>Now, test the models' image processing capabilities:</p>
+<ol>
+<li>
+<p>Enter this prompt in the text field:
+   <div class="highlight"><pre><span></span><code>Extract the text from the attached image.
+</code></pre></div></p>
+</li>
+<li>
+<p>Click the image attachment icon to add a picture as input</p>
+</li>
+</ol>
+<p><a class="glightbox" href="../img/image_attachment.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image Attachment" src="../img/image_attachment.png" /></a></p>
+<ol>
+<li>
+<p>Select an image file to upload. You'll be prompted with a text field with a default file path in your workspace directory. Replace it with the following:
+   <div class="highlight"><pre><span></span><code>/workspaces/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/docs/img/gh_copilot_slide.png
+</code></pre></div>
+<a class="glightbox" href="../img/image_file_path.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image File Path" src="../img/image_file_path.png" /></a></p>
+</li>
+<li>
+<p>Send the multimodal prompt on both models simultaneously.</p>
+</li>
+</ol>
+<p>Observe how each model handles the image input and the accuracy of the extracted text.</p>
+<p>Next, let's test their reasoning capabilities, with the following prompt:</p>
+<div class="highlight"><pre><span></span><code>Create a content strategy plan for a social media management team currently focused on increasing awareness of AI-powered developer productivity tools. Include target audience and channels, key messages, content types, and a sample posting schedule for one week. Include rationale for your choices.
+</code></pre></div>
+<p>Look at how each model approaches the task, the depth of analysis, and the creativity in their strategies. Also, note the reasoning and justification provided in their responses.</p>
+<h2 id="step-5-analyze-and-compare-results">Step 5: Analyze and Compare Results<a class="headerlink" href="#step-5-analyze-and-compare-results" title="Permanent link">&para;</a></h2>
+<p>Review the outputs from both models, using several factors to guide your evaluation:</p>
+<ul>
+<li><strong>Response Quality</strong>: Compare the depth and accuracy of descriptions, as well as the coherence with the input prompt.</li>
+<li><strong>Detail Level</strong>: Which model provides more comprehensive analysis?</li>
+<li><strong>Processing Time</strong>: Note any differences in response speed.</li>
+<li><strong>Output Formatting</strong>: Evaluate clarity and organization of responses, as well as verbosity.</li>
+<li><strong>Token Usage</strong>: Inspect the token usage for each model to understand cost implications. Note that token usage may vary not only based on the verbosity of the response but also on the tokenizer efficiency of each model.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Number of output tokens is visible in the response footer, along with characters length.</p>
+</div>
+<p><a class="glightbox" href="../img/token_usage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Token usage" src="../img/token_usage.png" /></a></p>
+<h3 id="leverage-github-copilot-for-comparative-analysis">Leverage GitHub Copilot for Comparative Analysis<a class="headerlink" href="#leverage-github-copilot-for-comparative-analysis" title="Permanent link">&para;</a></h3>
+<p>To assist with the comparative analysis, you can leverage GitHub Copilot to generate a comparison summary.</p>
+<p>To access GitHub Copilot Chat, select the <strong>Toggle Chat</strong> icon at the top of the Visual Studio Code window.</p>
+<p><a class="glightbox" href="../img/toggle-chat.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Toggle chat button." src="../img/toggle-chat.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If asked to log in at your first interaction with Copilot, select <strong>Sign-in</strong> -&gt; <strong>Continue with GitHub</strong>. Then click on <strong>Continue</strong> to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.</p>
+</div>
+<p>Try the following prompt in the Copilot chat window:</p>
+<div class="highlight"><pre><span></span><code>I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating Mistral Small 3.1 and OpenAI GPT 4.1. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
+</code></pre></div>
+<p>To answer this, Copilot calls the <em>Get AI Model Guidance</em> tool of the AI Toolkit, which provides model recommendations based on your use case. In the response, you should see an expandable section with the details of the tool call, followed by the comparative analysis.</p>
+<p><a class="glightbox" href="../img/copilot_tool_call.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../img/copilot_tool_call.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If GitHub Copilot doesn't invoke the AI Toolkit tools when generating its response, you can enter <code>#aitk</code> in the chat window to explicitly select which tool(s) you'd like GitHub Copilot to use prior to submitting your prompt.</p>
+</div>
+<h2 id="step-6-select-a-model-for-next-steps">Step 6: Select a Model for Next Steps<a class="headerlink" href="#step-6-select-a-model-for-next-steps" title="Permanent link">&para;</a></h2>
+<p>Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with <strong>GPT-4.1</strong>. 
+Click on <strong>Select this model</strong> on the right side of the model name.</p>
+<p><a class="glightbox" href="../img/select_this_model.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Select this model" src="../img/select_this_model.png" /></a></p>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The Model Catalog provides a comprehensive view of available AI models from multiple providers</li>
+<li>Filtering capabilities help you quickly identify models that match your specific requirements</li>
+<li>Model comparison in the Playground enables data-driven decision making</li>
+<li>Different hosting options offer varying benefits for different stages of development</li>
+<li>Multimodal capabilities can be tested effectively using the built-in comparison tools</li>
+</ul>
+<p>This exploration process ensures you select the most appropriate model for your specific use case, balancing factors like performance, cost, features, and deployment requirements.
+Click <strong>Next</strong> to proceed to the following section of the lab.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01_Get_Started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03_Model_Augmentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Model Augmentation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Model Augmentation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - present Microsoft
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.footer", "content.code.copy", "navigation.tabs.sticky", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
