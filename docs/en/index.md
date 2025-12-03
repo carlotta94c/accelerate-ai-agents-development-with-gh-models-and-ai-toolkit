@@ -1,7 +1,7 @@
 # Introduction
 
 !!! note
-	This workshop will give you hand-on experience with the AI Toolkit (AITK) and Azure AI Foundry in Visual Studio Code to prototype multimodal agents for your business scenario.
+	This workshop will give you hand-on experience with the AI Toolkit (AITK) in Visual Studio Code to prototype multimodal agents for your business scenario.
 
 ## Learning Objectives
 
@@ -12,7 +12,7 @@ By the end of this workshop, you should be able to:
 
 ## Lab Outline
 
-The lab is organized into 4 sections, taking you through the process of prototyping a multimodal agent with Azure AI Foundry and the AI Toolkit.
+The lab is organized into 4 sections, taking you through the process of prototyping a multimodal agent with the AI Toolkit for VS Code.
 
 1. **Part 1 - Model Selection** Model selection is an essential step in building AI solutions. In this section, you will explore the AI Toolkit Model Catalog to compare and select models that best fit your business scenario.
 2. **Part 2 - Model Augmentation** Once you have selected a model, you will learn how to augment it using prompt engineering and context data to improve its performance and relevance to your specific use case.

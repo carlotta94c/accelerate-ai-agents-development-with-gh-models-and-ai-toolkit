@@ -1,6 +1,6 @@
 # Model Selection: Exploring the AI Toolkit Model Catalog
 
-In this section, you will explore the AI Toolkit Model Catalog to discover, filter, and compare models for your multimodal agent project. The Model Catalog provides access to models from various providers including GitHub, Azure AI Foundry, OpenAI, and others.
+In this section, you will explore the AI Toolkit Model Catalog to discover, filter, and compare models for your multimodal agent project. The Model Catalog provides access to models from various providers including GitHub, Microsoft Foundry, OpenAI, and others.
 
 ## Step 1: Apply Filters to Narrow Your Selection
 
@@ -16,15 +16,15 @@ Since the list is quite consistent, you can use the filtering options to narrow 
 
 ### Filter by Hosting Provider
 
-1. Click on the **Hosted by** filter dropdown. You have several options, such as GitHub, Azure AI Foundry, OpenAI and you can even leverage models hosted on your local infrastructure, through Ollama or ONNX.
+1. Click on the **Hosted by** filter dropdown. You have several options, such as GitHub, Microsoft Foundry, OpenAI and you can even leverage models hosted on your local infrastructure, through Ollama or ONNX.
 2. Select **GitHub** to view free-to-use models that are excellent for prototyping.
 
 !!! note
-    GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Azure AI Foundry.
+    GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Microsoft Foundry.
 
 ### Filter by Model Features
 
-1. Click on the **Features** filter dropdown to filter by model capabilities, such as image/audio or video processing, tool calling, etc.
+1. Click on the **Feature** filter dropdown to filter by model capabilities, such as image/audio or video processing, tool calling, etc.
 2. Select **Image Attachment** to find multimodal models that support visual input processing and enables multimodal interactions combining text and images.
 
 ### Filter by Publisher
@@ -52,13 +52,16 @@ After applying filters, you'll see a refined list of models. For this exercise:
 2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
 
 !!! tip
-    Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'.
+    Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'. If you don't see them, click on the refresh icon to update the view.
 
 ![Model collection](../img/model_collection.png)
 
 3. In the **Model** field, select one of the two GitHub-hosted models you added to your collection, for example **Mistral Small 3.1 (via GitHub)**. It will be loaded into the Playground automatically.
 
 ![Model Playground](../img/model_playground.png)
+
+!!! note
+    You might experience some delay in model loading, especially if it's your first time accessing the Playground. Please be patient while the model initializes.
 
 4. Next, click the **Compare** button to enable side-by-side comparison
 5. From the dropdown, select your second model (GPT-4.1 if Mistral Small 3.1 is already selected)
@@ -124,6 +127,29 @@ Review the outputs from both models, using several factors to guide your evaluat
     Number of output tokens is visible in the response footer, along with characters length.
 
 ![Token usage](../img/token_usage.png)
+
+### Leverage GitHub Copilot for Comparative Analysis
+To assist with the comparative analysis, you can leverage GitHub Copilot to generate a comparison summary.
+
+To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the Visual Studio Code window.
+
+![Toggle chat button.](../img/toggle-chat.png)
+
+!!! note
+    If asked to log in at your first interaction with Copilot, select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
+
+Try the following prompt in the Copilot chat window:
+
+```
+I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating Mistral Small 3.1 and OpenAI GPT 4.1. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
+```
+
+To answer this, Copilot calls the *Get AI Model Guidance* tool of the AI Toolkit, which provides model recommendations based on your use case. In the response, you should see an expandable section with the details of the tool call, followed by the comparative analysis.
+
+![alt text](../img/copilot_tool_call.png)
+
+!!! note
+    If GitHub Copilot doesn't invoke the AI Toolkit tools when generating its response, you can enter `#aitk` in the chat window to explicitly select which tool(s) you'd like GitHub Copilot to use prior to submitting your prompt.
 
 ## Step 6: Select a Model for Next Steps
 

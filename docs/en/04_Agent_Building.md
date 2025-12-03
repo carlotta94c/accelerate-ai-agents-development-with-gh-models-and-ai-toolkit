@@ -26,7 +26,7 @@ Similarly to what we've previously done in the Model Playground, we'll now need 
 !!! tip
     The Agent Builder provides a **Generate** feature that uses a large language model (LLM) to generate a set of instructions from a description of your agent's task. This feature is helpful if you need guidance in crafting the agent's instructions.
 
-    ![Generate Agent Instruction](../img/generate-agent-instruction.png)
+![Generate Agent Instruction](../img/generate-agent-instruction.png)
 
 For the sake of this exercise, we'll leverage a set of instructions similar to the one used in the previous section:
 
@@ -91,7 +91,7 @@ To achieve this, we can use the **Model Context Protocol (MCP)** server to provi
 
 This project already includes the configuration to run the remote [Microsoft Learn MCP server](https://github.com/microsoftdocs/mcp), which exposes search tools to query the [Microsoft Learn](https://learn.microsoft.com/) documentation and search for official Microsoft/Azure code samples.
 
-To start the **Microsoft Learn** server, within your codespace, navigate to `.vscode/mcp.json`. Within the `mcp.json` file, locate the `Learn MCP Server` and click **Start** above the server.
+To start the **Microsoft Learn** server, , within your Visual Studio Code workspace, go to **Explorer** from the side bar menu, navigate to `.vscode/mcp.json`. Within the `mcp.json` file, locate the `Learn MCP Server` and click **Start** above the server.
 
 ![Start Learn MCP Server](../img/start-mcp-server.png)
 
@@ -123,17 +123,6 @@ Create five short LinkedIn posts about the advantages of using AI tools from the
 In addition to the agent's response, you should see the details of the tool invocations within the chat area. Expand the details of the tool calls to see how the agent used the MCP tools to search for relevant Microsoft Learn documentation and code samples to ground its response.
 
 ![Agent Tool Calls](../img/agent_tools_call.png)
-
-## Step 6: Extract the Agent's Code
-
-!!! note
-    Agent evaluation is a crucial step in the agent development process, prior to deployment. It allows you to assess the agent's performance, identify areas for improvement, and ensure that it meets the desired objectives. This lab is not going to cover agent evaluation in detail, but you can learn more about it in the [official documentation](https://code.visualstudio.com/docs/intelligentapps/evaluation).
-
-Once you have your agent prototype ready and tested, you can export it to code that can be integrated into your applications. To do this, simply click on the **View code** button at the bottom of the Agent Builder interface.
-
-![View Code](../img/view_code.png)
-
-Select your preferred SDK (e.g. *Microsoft Agent Framework*) and your preferred programming language (e.g. *Python*) and you'll get the agent logic template that you can further customize.
 
 ## Key Takeaways
 

@@ -1,7 +1,7 @@
 # Get started
 
 !!! tip
-    What is the **Azure AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Azure AI Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
+    What is the **AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Microsoft Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
 
 ## Open workshop in a GitHub Codespace
 
@@ -54,5 +54,5 @@ In the GitHub Codespace, you should be able to see - among the Visual Studio Cod
 
 ## Ready to start
 
-That covers the necessary setup to work with the AI Toolkit in VScode and Azure AI Foundry hosted models. We will now move forward to begin exploring the Model Catalog and interacting with the models.
+That covers the necessary setup to work with the AI Toolkit in VScode and Github-hosted models. We will now move forward to begin exploring the Model Catalog and interacting with the models.
 Click **Next** to proceed to the following section of the lab.

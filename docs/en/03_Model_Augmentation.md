@@ -65,7 +65,7 @@ The model will analyze the image and provides a suggestion for a LinkedIn post t
 Let's now test the model with a user query which is not relevant to the given scenario. Enter the following prompt:
 
 ```
-What’s the weather like in Messina today? 
+What’s the weather like in Lecce today? 
 ```
 
 The model should politely inform the user that it can only assist with social media content creation, demonstrating its ability to follow the guidelines set in the system message.
