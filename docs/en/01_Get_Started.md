@@ -1,7 +1,7 @@
 # Get started
 
 !!! tip
-    What is the **AI Toolkit(AITK)**? [The AI Toolkit (AITK)](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as Github, Microsoft Foundry or even locally. With AITK, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
+    What is the **Foundry Toolkit**? [The Foundry Toolkit](https://code.visualstudio.com/docs/intelligentapps/overview) is an extension for Visual Studio Code that provides a unified interface to access and interact with various AI models and services. It allows users to easily explore, compare, and utilize different AI models from multiple providers, both proprietary and open source, hosted on several platforms, such as GitHub, Microsoft Foundry or even locally. With the Foundry Toolkit, developers can streamline their Generative AI development workflow by integrating model selection, prompt engineering, and agent prototyping and testing directly within their code editor.
 
 ## Open workshop in a GitHub Codespace
 
@@ -41,18 +41,53 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
     ![Open in VS Code](../img/open_in_vscode.png)
 
 !!! warning
-    If you move to VS Code Desktop App, make sure the Github account you are logged in within VS Code is the same you used to create the GitHub Codespace.
+    If you move to VS Code Desktop App, make sure the GitHub account you are logged in within VS Code is the same you used to create the GitHub Codespace.
 
-## Verify AI Toolkit extension is installed
+## Set up the Azure AI Proxy
 
-In the GitHub Codespace, you should be able to see - among the Visual Studio Code extensions already installed - the **AI Toolkit**. This is the extension we will be using to interact with various AI models and services in this lab.
+For this workshop, we will use an **Azure AI Proxy** that provides access to the latest AI models without requiring an Azure subscription. The proxy exposes OpenAI-compatible endpoints, so you can use it directly with the Foundry Toolkit.
+
+1. Open a browser and navigate to the [Azure AI Proxy Registration](https://blue-beach-0df863010.7.azurestaticapps.net/event/be6b-7fab) page.
+
+2. Click on **Login with GitHub** and authenticate using your GitHub account credentials.
+
+3. Once logged in, you will see your **Event API Key** and the **Model Endpoints** available for this workshop. Copy both values — you will need them in the next step to configure the models in the Foundry Toolkit.
+
+    !!! tip
+        Keep this browser tab open or store the API key and endpoint URLs in a safe place (e.g., a text file in your Codespace), as you will need them throughout the workshop.
+
+## Verify Foundry Toolkit extension is installed
+
+In the GitHub Codespace, you should be able to see — among the Visual Studio Code extensions already installed — the **Foundry Toolkit**. This is the extension we will be using to interact with AI models and prototype agents in this lab.
 
 ![Installed extensions](../img/installed_extensions.png)
 
 !!! tip
     If you don't see the extension icon, click on the ellipsis (...) at the bottom of the sidebar to see the full list of installed extensions.
 
+## Configure Custom Models in the Foundry Toolkit
+
+Now that you have your API key and model endpoints from the Azure AI Proxy, configure the models in the Foundry Toolkit so you can use them throughout the workshop.
+
+1. Click on the **Foundry Toolkit** icon in the left sidebar to open the extension panel.
+
+2. Click on **Model Catalog** to open the catalog interface.
+
+3. At the top of the Model Catalog, click **+ Add Model** (or the equivalent button to add a custom model endpoint).
+
+4. When prompted, select **OpenAI Compatible** (or **Custom**) as the provider type.
+
+5. For each model you want to configure, enter:
+    - **Model Name**: `gpt-5.4` (for the first model) and `DeepSeek-V4-Pro` (for the second model)
+    - **Endpoint URL**: the corresponding endpoint URL you copied from the Azure AI Proxy registration page
+    - **API Key**: the Event API Key you copied from the Azure AI Proxy registration page
+
+6. Confirm the configuration. The models will now appear in the **Model Catalog** under your custom provider and will be available for use in the Playground and Agent Builder.
+
+    !!! note
+        Repeat the configuration steps above for both `gpt-5.4` and `DeepSeek-V4-Pro`, using their respective endpoint URLs.
+
 ## Ready to start
 
-That covers the necessary setup to work with the AI Toolkit in VScode and Github-hosted models. We will now move forward to begin exploring the Model Catalog and interacting with the models.
+That covers the necessary setup to work with the Foundry Toolkit in VS Code and Azure AI Proxy-hosted models. We will now move forward to begin exploring the Model Catalog and interacting with the models.
 Click **Next** to proceed to the following section of the lab.

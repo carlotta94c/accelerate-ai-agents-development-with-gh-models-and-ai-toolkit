@@ -1,11 +1,11 @@
-# Workshop: Accelerate AI Agents Development with GitHub Models and AI Toolkit
+# Workshop: Accelerate AI Agents Development with the Foundry Toolkit
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://aka.ms/MicrosoftFoundry-Ignite25)
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=adff2f&logoColor=fff)](https://aka.ms/MicrosoftFoundryForum-Ignite25)
 
 ## Lab Description
 
-In this lab, you'll get hands-on with the AI Toolkit (AITK) and Microsoft Foundry in VS Code to explore and compare the latest multimodal and reasoning models from the Model Catalog. Learn how to augment models for a real-world business scenario, using prompt and context engineering. Prototype an agent using the AITK Agent Builder, and equip the agent with the right tools via MCP.
+In this lab, you'll get hands-on with the Foundry Toolkit and Microsoft Foundry in VS Code to explore and compare the latest multimodal and reasoning models from the Model Catalog. Learn how to augment models for a real-world business scenario, using prompt and context engineering. Prototype an agent using the Foundry Toolkit Agent Builder, and equip the agent with the right tools via MCP.
 
 ## Learning Outcomes
 

@@ -1,45 +1,37 @@
-# Model Selection: Exploring the AI Toolkit Model Catalog
+# Model Selection: Exploring the Foundry Toolkit Model Catalog
 
-In this section, you will explore the AI Toolkit Model Catalog to discover, filter, and compare models for your multimodal agent project. The Model Catalog provides access to models from various providers including GitHub, Microsoft Foundry, OpenAI, and others.
+In this section, you will explore the Foundry Toolkit Model Catalog to discover, filter, and compare models for your multimodal agent project. The Model Catalog provides access to models from various providers including Microsoft Foundry, OpenAI, and custom providers.
 
-## Step 1: Apply Filters to Narrow Your Selection
+## Step 1: Open the Model Catalog
 
-1. In your Codespace, locate the **AI Toolkit** extension icon in the left sidebar
-2. Click on the AI Toolkit icon to open the extension panel
-3. Click on **Model Catalog** to browse available models
+1. In your Codespace, locate the **Foundry Toolkit** extension icon in the left sidebar.
+2. Click on the Foundry Toolkit icon to open the extension panel.
+3. Under **Developer Tools**, expand the **Discover** section and click on **Model Catalog** to open the catalog interface.
 
 ![Model Catalog](../img/model_catalog.png)
 
 On the top of the page you'll find the most popular models; scroll down to see the full list of available models.
 
-Since the list is quite consistent, you can use the filtering options to narrow down the selection based on your requirements.
-
-### Filter by Hosting Provider
-
-1. Click on the **Hosted by** filter dropdown. You have several options, such as GitHub, Microsoft Foundry, OpenAI and you can even leverage models hosted on your local infrastructure, through Ollama or ONNX.
-2. Select **GitHub** to view free-to-use models that are excellent for prototyping.
-
-!!! note
-    GitHub models are perfect for getting started because they're free to use, but they are token-rate limited. You can experiment without cost concerns, but for production deployments consider using a pay-as-you-go offering through your GitHub Account or Microsoft Foundry.
+Since the list is quite extensive, you can use the filtering options to narrow down the selection based on your requirements.
 
 ### Filter by Model Features
 
 1. Click on the **Feature** filter dropdown to filter by model capabilities, such as image/audio or video processing, tool calling, etc.
-2. Select **Image Attachment** to find multimodal models that support visual input processing and enables multimodal interactions combining text and images.
+2. Select **Image Attachment** to find multimodal models that support visual input processing and enable multimodal interactions combining text and images.
 
 ### Filter by Publisher
 
-1. Click on the **Publisher** filter dropdown to filter by the model publisher, such as Microsoft, Meta, Cohere, etc. Note that you can find both open-source and proprietary models.
-2. Select **OpenAI** and **Mistral AI** to view models from these two leading providers.
+1. Click on the **Publisher** filter dropdown to filter by the model publisher, such as Microsoft, Meta, OpenAI, etc.
+2. Feel free to explore different publishers to understand the breadth of models available.
+
+!!! note
+    For this workshop, you have already configured **gpt-5.4** and **DeepSeek-V4-Pro** as custom models via the Azure AI Proxy in the previous section. These are the two models you will use for comparison and prototyping throughout the lab.
 
 ## Step 2: Add Models to Your Collection
 
-After applying filters, you'll see a refined list of models. For this exercise:
+Locate the **gpt-5.4** and **DeepSeek-V4-Pro** models you configured as custom models.
 
-1. Locate the **GPT-4.1** and **Mistral Small 3.1** models in the filtered results.
-   - **GPT-4.1** is a full-featured multimodal model with comprehensive capabilities
-   - **Mistral Small 3.1** is an optimized smaller model with faster response times and lower costs.
-2. Click **Add model** on each model tile to add them to your collection.
+1. Click **Add model** on each model tile to add them to your collection.
 
 ![Add Model](../img/add_model.png)
 
@@ -48,24 +40,23 @@ After applying filters, you'll see a refined list of models. For this exercise:
 
 ## Step 3: Open the Playground for Testing
 
-1. Click on **Model Playground** in the AI Toolkit panel. The Playground allows you to test and compare models interactively.
-2. You'll be prompted to login to your GitHub account to access the free-tier models. Click **Allow** and complete the authentication process, by using the same GitHub credentials you used in the previous lab section.
+1. Click on **Model Playground** in the Foundry Toolkit panel. The Playground allows you to test and compare models interactively.
 
 !!! tip
-    Now that you are logged in, you should be able to see the models you added into your collection in the 'My resources' tab, under 'GitHub'. If you don't see them, click on the refresh icon to update the view.
+    You should be able to see the models you added in your collection under **My resources**. If you don't see them, click on the refresh icon to update the view.
 
 ![Model collection](../img/model_collection.png)
 
-3. In the **Model** field, select one of the two GitHub-hosted models you added to your collection, for example **Mistral Small 3.1 (via GitHub)**. It will be loaded into the Playground automatically.
+2. In the **Model** field, select one of the two models you added to your collection, for example **DeepSeek-V4-Pro**. It will be loaded into the Playground automatically.
 
 ![Model Playground](../img/model_playground.png)
 
 !!! note
     You might experience some delay in model loading, especially if it's your first time accessing the Playground. Please be patient while the model initializes.
 
-4. Next, click the **Compare** button to enable side-by-side comparison
-5. From the dropdown, select your second model (GPT-4.1 if Mistral Small 3.1 is already selected)
-6. You now have two models ready for comparison testing
+3. Next, click the **Compare** button to enable side-by-side comparison.
+4. From the dropdown, select your second model (**gpt-5.4** if DeepSeek-V4-Pro is already selected).
+5. You now have two models ready for comparison testing.
 
 ![Model Comparison](../img/model_comparison.png)
 
@@ -80,7 +71,7 @@ Let's start interacting with the models with a simple prompt:
    ```
    Create a short LinkedIn post about developer productivity with AI tools.
    ```
-2. Click the paper airplane icon to execute the prompt on both models simultaneously
+2. Click the paper airplane icon to execute the prompt on both models simultaneously.
 
 ![Test the model](../img/test_the_model.png)
 
@@ -91,7 +82,7 @@ Now, test the models' image processing capabilities:
    Extract the text from the attached image.
    ```
 
-2. Click the image attachment icon to add a picture as input
+2. Click the image attachment icon to add a picture as input.
 
 ![Image Attachment](../img/image_attachment.png)
 
@@ -136,24 +127,24 @@ To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the
 ![Toggle chat button.](../img/toggle-chat.png)
 
 !!! note
-    If asked to log in at your first interaction with Copilot, select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used to access the GitHub hosted models, when redirected to the GitHub sign-in page.
+    If asked to log in at your first interaction with Copilot, select **Sign-in** -> **Continue with GitHub**. Then click on **Continue** to proceed with the GitHub account you used in the previous section.
 
 Try the following prompt in the Copilot chat window:
 
 ```
-I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating Mistral Small 3.1 and OpenAI GPT 4.1. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
+I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating DeepSeek-V4-Pro and gpt-5.4. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
 ```
 
-To answer this, Copilot calls the *Get AI Model Guidance* tool of the AI Toolkit, which provides model recommendations based on your use case. In the response, you should see an expandable section with the details of the tool call, followed by the comparative analysis.
+To answer this, Copilot calls the *Get AI Model Guidance* tool of the Foundry Toolkit, which provides model recommendations based on your use case. In the response, you should see an expandable section with the details of the tool call, followed by the comparative analysis.
 
 ![alt text](../img/copilot_tool_call.png)
 
 !!! note
-    If GitHub Copilot doesn't invoke the AI Toolkit tools when generating its response, you can enter `#aitk` in the chat window to explicitly select which tool(s) you'd like GitHub Copilot to use prior to submitting your prompt.
+    If GitHub Copilot doesn't invoke the Foundry Toolkit tools when generating its response, you can enter `#aitk` in the chat window to explicitly select which tool(s) you'd like GitHub Copilot to use prior to submitting your prompt.
 
 ## Step 6: Select a Model for Next Steps
 
-Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with **GPT-4.1**. 
+Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with **gpt-5.4**. 
 Click on **Select this model** on the right side of the model name.
 
 ![Select this model](../img/select_this_model.png)

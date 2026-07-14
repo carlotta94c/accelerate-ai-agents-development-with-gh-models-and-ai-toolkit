@@ -1,13 +1,13 @@
 # Agent Building: Building an AI Agent with Agent Builder
 
-In this section, you will learn how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools, enabling it to take actions on behalf of the user. Agent Builder streamlines the engineering workflow for building agents, including prompt engineering and integration with tools, such as MCP servers.
+In this section, you will learn how to create an AI agent with Agent Builder in the Foundry Toolkit and equip it with tools, enabling it to take actions on behalf of the user. Agent Builder streamlines the engineering workflow for building agents, including prompt engineering and integration with tools, such as MCP servers.
 
 !!! tip
     [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is a powerful, standardized framework that optimizes communication between Large Language Models (LLMs) and external tools, applications, and data sources.
 
 ## Step 1: Explore Agent Builder
 
-To access Agent Builder, in the AI Toolkit view, select **Agent Builder**.
+To access Agent Builder, in the Foundry Toolkit view, locate the **Build** section under **Developer Tools**. Expand it and click on **Create Agent**. Next, select **Open Agent Builder** to open the Agent Builder interface in a new tab within Visual Studio Code.
 
 ![Agent Builder](../img/agent_builder.png)
 
@@ -15,7 +15,7 @@ Agent Builder's UI is organized into two sections. The left side of Agent Builde
 
 ## Step 2: Create the Agent
 
-In **Agent Builder** configure the new agent's basic information. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **OpenAI gpt-4.1 (via GitHub)** model.
+In **Agent Builder** configure the new agent's basic information. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **gpt-5.4** model you configured via the Azure AI Proxy.
 
 ![Agent Basic Information](../img/agent-basic-information.png)
 
@@ -68,7 +68,7 @@ Think step-by-step:
 - Never guess or fabricate information about Microsoft technologies or tools.
 - If unsure about any details, always use the server tools to find out. Do not rely on assumptions.
 - Continue querying and planning with tools until your answer is fully supported and grounded.
-- Only finish your turn when the user’s query is fully resolved and content is complete.
+- Only finish your turn when the user's query is fully resolved and content is complete.
 
 # Guardrails
 - Stick to the scenario above. If something falls outside social media content creation, respond to the user politely with your scope limits.
@@ -126,6 +126,6 @@ In addition to the agent's response, you should see the details of the tool invo
 
 ## Key Takeaways
 
-In this section, you learned how to create an AI agent with Agent Builder in the AI Toolkit and equip it with tools via Model Context Protocol (MCP). You leveraged the Microsoft Learn MCP server to provide the agent with access to relevant data - the Microsoft official docs, allowing it to retrieve up-to-date information and context as needed.
+In this section, you learned how to create an AI agent with Agent Builder in the Foundry Toolkit and equip it with tools via Model Context Protocol (MCP). You leveraged the Microsoft Learn MCP server to provide the agent with access to relevant data - the Microsoft official docs, allowing it to retrieve up-to-date information and context as needed.
 
 Click **Next** to proceed to the following section of the lab.
