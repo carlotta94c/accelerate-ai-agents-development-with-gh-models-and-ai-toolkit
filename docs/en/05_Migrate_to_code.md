@@ -1,8 +1,8 @@
 # Migrate to Code
 
-In this section, you will learn how to migrate the agent you've created in AI Toolkit to a code-based workflow.
+In this section, you will learn how to migrate the agent you've created in the Foundry Toolkit to a code-based workflow.
 
-The AI Toolkit provides generated code for agents created in Agent Builder. You can choose your preferred SDK as well as programming language. Once you have your code file, you can integrate your agent into your own app.
+The Foundry Toolkit provides generated code for agents created in Agent Builder. You can choose your preferred SDK as well as programming language. Once you have your code file, you can integrate your agent into your own app.
 
 ## Step 1: Generate the Code
 
@@ -82,5 +82,4 @@ python ai-agent.py
 - Agent Builder automatically generates code for agents in multiple programming languages and SDKs, facilitating easy migration from prototype to production.
 - Code files may contain placeholders that need modification before execution, requiring developers to understand and adapt the generated logic for their specific needs.
 - Using GitHub Copilot Chat in Ask and Agent modes helps developers understand generated code and create additional components like UI elements for complete agent applications.
-
 Click **Next** to proceed to the following section of the lab.

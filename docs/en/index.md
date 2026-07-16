@@ -1,22 +1,22 @@
 # Introduction
 
 !!! note
-	This workshop will give you hand-on experience with the AI Toolkit (AITK) in Visual Studio Code to prototype multimodal agents for your business scenario.
+	This workshop will give you hand-on experience with the Foundry Toolkit in Visual Studio Code to prototype multimodal agents for your business scenario.
 
 ## Learning Objectives
 
 By the end of this workshop, you should be able to:
-- Explore and compare models in the AITK Model catalog, to select the best fit for your use-case.
-- Augment models with prompts and data to get more accurate and grounded responses in the AITK Playground.
-- Prototype an agent by combining models and instructions with tools via MCP (Model Context Protocol) using the AITK Agent Builder.
+- Explore and compare models in the Foundry Toolkit Model catalog, to select the best fit for your use-case.
+- Augment models with prompts and data to get more accurate and grounded responses in the Foundry Toolkit Playground.
+- Prototype an agent by combining models and instructions with tools via MCP (Model Context Protocol) using the Foundry Toolkit Agent Builder.
 
 ## Lab Outline
 
-The lab is organized into 4 sections, taking you through the process of prototyping a multimodal agent with the AI Toolkit for VS Code.
+The lab is organized into 4 sections, taking you through the process of prototyping a multimodal agent with the Foundry Toolkit for VS Code.
 
-1. **Part 1 - Model Selection** Model selection is an essential step in building AI solutions. In this section, you will explore the AI Toolkit Model Catalog to compare and select models that best fit your business scenario.
+1. **Part 1 - Model Selection** Model selection is an essential step in building AI solutions. In this section, you will explore the Foundry Toolkit Model Catalog to compare and select models that best fit your business scenario.
 2. **Part 2 - Model Augmentation** Once you have selected a model, you will learn how to augment it using prompt engineering and context data to improve its performance and relevance to your specific use case.
-3. **Part 3 - Agent Prototyping** In this section, you will use the AITK Agent Builder to prototype an agent. You will combine your selected and augmented models with instructions and tools via MCP (Model Context Protocol).
+3. **Part 3 - Agent Prototyping** In this section, you will use the Foundry Toolkit Agent Builder to prototype an agent. You will combine your selected and augmented models with instructions and tools via MCP (Model Context Protocol).
 4. **Part 4 - From Prototype to Code** Finally, you will learn how to export your agent prototype into code that can be integrated into your applications.
 
 Click **Next** to set up your Workshop environment and get started.

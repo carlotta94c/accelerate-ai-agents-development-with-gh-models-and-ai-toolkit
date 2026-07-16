@@ -11,7 +11,7 @@ In this lab, you learned how to:
 
 As you move forward in your development journey with AI agents, and consider deploying them in production environments, there's a few important considerations to keep in mind:
 
-- **Azure hosted models**: While this lab focused on using GitHub-hosted models for prototyping, for production scenarios, it's advisable to use Azure-hosted models. These models offer better performance, reliability, and compliance with enterprise standards. You can explore the available catalog in [Microsoft Foundry Models](https://ai.azure.com/catalog).
+- **Azure hosted models**: While this lab focused on using the Azure AI Proxy for prototyping, for production scenarios, it's advisable to use Azure-hosted models directly. These models offer better performance, reliability, and compliance with enterprise standards. You can explore the available catalog in [Microsoft Foundry Models](https://ai.azure.com/catalog).
 - **Evaluation**: Before deploying an agent, it's crucial to evaluate its performance thoroughly. This includes testing its responses for accuracy, relevance, and safety. Consider using a mix of automated tests and human evaluations. You can learn more about agent evaluation in the [official documentation](https://code.visualstudio.com/docs/intelligentapps/evaluation).
 - **Deployment**: When deploying your agent, consider the infrastructure and platform that best suits your needs. An application similar to the one you prototyped in this lab - which includes a Python application based on Microsoft Agent Framework, a Microsoft Foundry hosted model and an MCP server - for example can be deployed using Azure Container Apps or Azure Kubernetes Service (AKS). These services provide scalability and reliability for production workloads.
 - **Monitoring**: Once deployed, continuously monitor the agent's performance in real-world scenarios. This helps in identifying any issues or areas for improvement. Set up logging and alerting mechanisms to track the agent's behavior and performance metrics. The observability features in Microsoft Foundry can be very helpful for this purpose. Discover more in the [official documentation](https://learn.microsoft.com/azure/ai-foundry/how-to/monitor-applications).
@@ -19,7 +19,7 @@ As you move forward in your development journey with AI agents, and consider dep
 
 ## Useful Resources
 
-1. Install the AI Toolkit in VS code: [aka.ms/AIToolkit](https://aka.ms/AIToolkit)
-2. Read the AI toolkit docs: [aka.ms/AIToolkit/docs](https://aka.ms/AIToolkit/docs)
+1. Install the Foundry Toolkit in VS Code: [aka.ms/AIToolkit](https://aka.ms/AIToolkit)
+2. Read the Foundry Toolkit docs: [aka.ms/AIToolkit/docs](https://aka.ms/AIToolkit/docs)
 3. Look at a real-world use case: [aka.ms/BRK441GHrepo](https://aka.ms/BRK441GHrepo)
 4. Share your learnings with the community and get support: [aka.ms/foundrydevs](https://aka.ms/foundrydevs)

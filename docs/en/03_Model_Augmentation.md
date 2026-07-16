@@ -14,6 +14,8 @@ The system message is a critical component of the prompt that sets the behavior 
 
 4. **Break Down Complex Instructions**: If the task is complex, consider breaking it down into simpler, step-by-step instructions to guide the model effectively.
 
+Start by clearing the chat history: click **New Playground** at the top left corner of the Playground screen.
+
 In the **System Prompt** field of the Playground, in the right pane, enter the following system message:
 
 ```
@@ -65,7 +67,7 @@ The model will analyze the image and provides a suggestion for a LinkedIn post t
 Let's now test the model with a user query which is not relevant to the given scenario. Enter the following prompt:
 
 ```
-What’s the weather like in Lecce today? 
+What's the weather like in Lecce today? 
 ```
 
 The model should politely inform the user that it can only assist with social media content creation, demonstrating its ability to follow the guidelines set in the system message.
@@ -78,7 +80,7 @@ For our use case, we are going to provide the model with some context about the 
 
 To add grounding data, we will use the **file attachment** feature in the Playground. This allows us to upload documents that the model can reference when generating responses.
 
-The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `data` folder of your AITK environment, named `global_ai_community.docx`.
+The document we are going to upload is a .docx file, containing information about the Global AI Community, including its mission, some key statistics and its presence in Italy. You can find the file in the `data` folder of your Foundry Toolkit environment, named `global_ai_community.docx`.
 
 1. Click the file attachment icon in the prompt input area.
 ![File attachment icon](../img/file_attachment_icon.png)
