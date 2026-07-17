@@ -101,6 +101,7 @@ Next, select **Could not find one? Browse more** when prompted with a search bar
 Next, select the **Microsoft Learn MCP server** from the list of available servers. In the next window, select the **Local** toggle and click **Connect**.
 
 ![Select Learn MCP Server](../img/mcp_server_tools_list.png)
+
 ![Connect to server](../img/connect_to_server.png)
 
 Come back to **Agent Builder** and repeat the process to add a new tool. This time you will be able to find the Microsoft Learn MCP server in the list of available tools.
