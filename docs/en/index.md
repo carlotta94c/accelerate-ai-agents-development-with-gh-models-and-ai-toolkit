@@ -6,8 +6,11 @@
 ## Learning Objectives
 
 By the end of this workshop, you should be able to:
+
 - Explore and compare models in the Foundry Toolkit Model catalog, to select the best fit for your use-case.
+
 - Augment models with prompts and data to get more accurate and grounded responses in the Foundry Toolkit Playground.
+
 - Prototype an agent by combining models and instructions with tools via MCP (Model Context Protocol) using the Foundry Toolkit Agent Builder.
 
 ## Lab Outline

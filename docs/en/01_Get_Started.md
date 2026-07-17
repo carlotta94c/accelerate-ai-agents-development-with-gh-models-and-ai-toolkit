@@ -49,9 +49,11 @@ For this workshop, we will use an **Azure AI Proxy** that provides access to the
 
 1. Open a browser and navigate to the [Azure AI Proxy Registration](https://blue-beach-0df863010.7.azurestaticapps.net/event/be6b-7fab) page.
 
-2. Click on **Login with GitHub** and authenticate using your GitHub account credentials.
+2. Click on **Login with GitHub** on the top right corner of the page and authenticate using your GitHub account credentials.
 
 3. Once logged in, you will see your **Event API Key** and the **Model Endpoints** available for this workshop. Copy both values — you will need them in the next step to configure the models in the Foundry Toolkit.
+
+![Foundry Toolkit access](../img/foundry-toolkit-access.png)
 
     !!! tip
         Keep this browser tab open or store the API key and endpoint URLs in a safe place (e.g., a text file in your Codespace), as you will need them throughout the workshop.
@@ -71,15 +73,18 @@ Now that you have your API key and model endpoints from the Azure AI Proxy, conf
 
 1. Click on the **Foundry Toolkit** icon in the left sidebar to open the extension panel.
 
-2. Click on **Model Catalog** to open the catalog interface.
+2. Navigate to **Local Resources** -> **Models**, under **My Resources**.
 
-3. At the top of the Model Catalog, click **+ Add Model** (or the equivalent button to add a custom model endpoint).
+3. Click **+** button to add a new model with a custom endpoint.
 
-4. When prompted, select **OpenAI Compatible** (or **Custom**) as the provider type.
+![Add custom model](../img/add_custom_model.png)
+
+4. When prompted, select **Add Custom Model** as the provider type.
+![Add custom model 2](../img/add_custom_model2.png)
 
 5. For each model you want to configure, enter:
-    - **Model Name**: `gpt-5.4` (for the first model) and `DeepSeek-V4-Pro` (for the second model)
     - **Endpoint URL**: the corresponding endpoint URL you copied from the Azure AI Proxy registration page
+    - **Model Name**: `gpt-5.4` (for the first model) and `DeepSeek-V4-Pro` (for the second model)
     - **API Key**: the Event API Key you copied from the Azure AI Proxy registration page
 
 6. Confirm the configuration. The models will now appear in the **Model Catalog** under your custom provider and will be available for use in the Playground and Agent Builder.
