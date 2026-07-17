@@ -15,9 +15,7 @@ Agent Builder's UI is organized into two sections. The left side of Agent Builde
 
 ## Step 2: Create the Agent
 
-In **Agent Builder** configure the new agent's basic information. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **gpt-5.4** model you configured via the Azure AI Proxy.
-
-![Agent Basic Information](../img/agent-basic-information.png)
+In **Agent Builder** configure the new agent's basic information. Within the **Agent name** field, enter **Social Media Manager**. For the agent's **Model**, select the **gpt-5.4-mini** model you configured via the Azure AI Proxy.
 
 ## Step 3: Provide Instructions for the Agent
 
@@ -83,34 +81,31 @@ In the next section, we'll cover more about the MCP server cited in the instruct
 
 ## Step 4: Add Tools to the Agent
 
-### Start the Microsoft Learn MCP server
+### Add the Microsoft Learn MCP server tools
 
 Earlier in the **Model Augmentation** exercise, we added grounding data to the model in the form of a .docx file attachment. While that may have been convenient for the sake of testing the base model prior to model selection, what we'd recommend is to ground the agent with data in such a way that's scalable to larger datasets and always up-to-date information.
 
 To achieve this, we can use the **Model Context Protocol (MCP)** server to provide the agent with access to relevant data sources. This allows the agent to retrieve up-to-date information and context as needed. The retrieval of relevant information is handled automatically by the MCP server, which communicates with the agent via the MCP standard, so that the agent can focus on generating responses based on the most relevant and current data.
 
-This project already includes the configuration to run the remote [Microsoft Learn MCP server](https://github.com/microsoftdocs/mcp), which exposes search tools to query the [Microsoft Learn](https://learn.microsoft.com/) documentation and search for official Microsoft/Azure code samples.
-
-To start the **Microsoft Learn** server, , within your Visual Studio Code workspace, go to **Explorer** from the side bar menu, navigate to `.vscode/mcp.json`. Within the `mcp.json` file, locate the `Learn MCP Server` and click **Start** above the server.
-
-![Start Learn MCP Server](../img/start-mcp-server.png)
-
-!!! note
-    Once the server is started, you should see the status change to **Running**.
+For this scenario, we'll use the [Microsoft Learn MCP server](https://github.com/microsoftdocs/mcp), which exposes search tools to query the [Microsoft Learn](https://learn.microsoft.com/) documentation and search for official Microsoft/Azure code samples. Grounding matters whenever your content references product capabilities, release details, or platform behavior.
 
 ### Add search tools to the agent
 
-Once the server is running, return to Agent Builder. In the **Tool** section, click on the **+** button and then select **MCP server**.
+In Agent Builder, go to the **Tool** section, click on the **+** button, and then select **MCP Server**.
 
 ![Add MCP Tool](../img/add_mcp_server.png)
 
-Next, select **Use tools added in Visual Studio Code**.
+Next, select **Could not find one? Browse more** when prompted with a search bar.
+![Browse more](../img/browse_more.png)
 
-![Use VS Code MCP Tools](../img/use_vscode_mcp_tools.png)
+Next, select the **Microsoft Learn MCP server** from the list of available servers. In the next window, select the **Local** toggle and click **Connect**.
 
-Make sure you have the `mcp_learn_mcp_ser_microsoft_docs_search` and `mcp_learn_mcp_ser_microsoft_docs_code_search` tools selected, then click **Ok**.
+![Select Learn MCP Server](../img/mcp_server_tools_list.png)
+![Connect to server](../img/connect_to_server.png)
 
-![Select Learn MCP Tools](../img/mcp_server_tools_list.png)
+Come back to **Agent Builder** and repeat the process to add a new tool. This time you will be able to find the Microsoft Learn MCP server in the list of available tools.
+
+![MCP Learn Server connected](../img/mcp_learn_server_connection.png)
 
 ## Step 5: Test tools integration
 

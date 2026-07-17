@@ -20,34 +20,37 @@ Since the list is quite extensive, you can use the filtering options to narrow d
 2. Select **Image Attachment** to find multimodal models that support visual input processing and enable multimodal interactions combining text and images.
 
 ### Filter by Publisher
-
 1. Click on the **Publisher** filter dropdown to filter by the model publisher, such as Microsoft, Meta, OpenAI, etc.
 2. Feel free to explore different publishers to understand the breadth of models available.
 
-!!! note
-    For this workshop, you have already configured **gpt-5.4** and **DeepSeek-V4-Pro** as custom models via the Azure AI Proxy in the previous section. These are the two models you will use for comparison and prototyping throughout the lab.
+### Open the Model Card
+To inspect further information about the model from the model provider (e.g. training dataset, model capabilities,cutoff, etc.), click on the model name to open the model card and read the model details. 
 
-## Step 2: Add Models to Your Collection
 
-Locate the **gpt-5.4** and **DeepSeek-V4-Pro** models you configured as custom models.
+## Step 2: Configure Custom Models in the Foundry Toolkit
 
-1. Click **Add model** on each model tile to add them to your collection.
+In the first section, you retrieved your API key and model endpoints from the Azure AI Proxy. Now, let's configure the models in the Foundry Toolkit so you can use them throughout the workshop.
 
-![Add Model](../img/add_model.png)
+1. On the top right corner of the model catalog, click on **+Bring your own model** to add a new model with a custom endpoint.
 
-!!! note
-    Once they are added, the blue button will change to green with the label **Added**.
+2. For each model you want to configure, enter:
+    - **Endpoint URL**: the corresponding endpoint URL you copied from the Azure AI Proxy registration page
+    - **Model Name**: `gpt-5.4` (for the first model) and `gpt-5.4-mini` (for the second model)
+    - **API Key**: the Event API Key you copied from the Azure AI Proxy registration page
+
+3. You will get a confirmation notification that the model has been added successfully to your local resources. It will now be available for use in the Model Playground and Agent Builder.
+
+    !!! note
+        Repeat the configuration steps above for both `gpt-5.4` and `gpt-5.4-mini`, using their respective endpoint URLs.
+
+4. Confirm that the models have been added to your resources by scrolling down to the **custom models** section of the Model Playground. You should see something similar:
+![Custom Models](../img/add_custom_models.png)
 
 ## Step 3: Open the Playground for Testing
 
-1. Click on **Model Playground** in the Foundry Toolkit panel. The Playground allows you to test and compare models interactively.
+1. Navigate to **Build** -> **Model Playground** in the Developer Tools panel. The Playground allows you to test and compare models interactively.
 
-!!! tip
-    You should be able to see the models you added in your collection under **My resources**. If you don't see them, click on the refresh icon to update the view.
-
-![Model collection](../img/model_collection.png)
-
-2. In the **Model** field, select one of the two models you added to your collection, for example **DeepSeek-V4-Pro**. It will be loaded into the Playground automatically.
+2. In the **Model** field, select one of the two models you added to your collection, for example **gpt-5.4-mini**. It will be loaded into the Playground automatically.
 
 ![Model Playground](../img/model_playground.png)
 
@@ -55,10 +58,8 @@ Locate the **gpt-5.4** and **DeepSeek-V4-Pro** models you configured as custom m
     You might experience some delay in model loading, especially if it's your first time accessing the Playground. Please be patient while the model initializes.
 
 3. Next, click the **Compare** button to enable side-by-side comparison.
-4. From the dropdown, select your second model (**gpt-5.4** if DeepSeek-V4-Pro is already selected).
+4. From the dropdown, select your second model (**gpt-5.4** if gpt-5.4-mini is already selected).
 5. You now have two models ready for comparison testing.
-
-![Model Comparison](../img/model_comparison.png)
 
 ## Step 4: Test Text Generation and Multimodal Capabilities
 
@@ -112,12 +113,6 @@ Review the outputs from both models, using several factors to guide your evaluat
 - **Detail Level**: Which model provides more comprehensive analysis?
 - **Processing Time**: Note any differences in response speed.
 - **Output Formatting**: Evaluate clarity and organization of responses, as well as verbosity.
-- **Token Usage**: Inspect the token usage for each model to understand cost implications. Note that token usage may vary not only based on the verbosity of the response but also on the tokenizer efficiency of each model.
-
-!!! tip
-    Number of output tokens is visible in the response footer, along with characters length.
-
-![Token usage](../img/token_usage.png)
 
 ### Leverage GitHub Copilot for Comparative Analysis
 To assist with the comparative analysis, you can leverage GitHub Copilot to generate a comparison summary.
@@ -132,19 +127,12 @@ To access GitHub Copilot Chat, select the **Toggle Chat** icon at the top of the
 Try the following prompt in the Copilot chat window:
 
 ```
-I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating DeepSeek-V4-Pro and gpt-5.4. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
+I am exploring models for an AI agent that should support a social media management team creating content targeted to a developer audience, on different channels and formats. I am evaluating gpt-5.4-mini and gpt-5.4. Which one would you recommend for this scenario, and why? Explain the trade-offs between models (e.g., reasoning ability, cost, latency, context length) so that I can make an informed choice.
 ```
-
-To answer this, Copilot calls the *Get AI Model Guidance* tool of the Foundry Toolkit, which provides model recommendations based on your use case. In the response, you should see an expandable section with the details of the tool call, followed by the comparative analysis.
-
-![alt text](../img/copilot_tool_call.png)
-
-!!! note
-    If GitHub Copilot doesn't invoke the Foundry Toolkit tools when generating its response, you can enter `#aitk` in the chat window to explicitly select which tool(s) you'd like GitHub Copilot to use prior to submitting your prompt.
 
 ## Step 6: Select a Model for Next Steps
 
-Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with **gpt-5.4**. 
+Once we are done with the comparison, we are going to select one of the two models for further prototyping in the next lab sections. For the sake of this exercise, let's go with **gpt-5.4-mini**. 
 Click on **Select this model** on the right side of the model name.
 
 ![Select this model](../img/select_this_model.png)

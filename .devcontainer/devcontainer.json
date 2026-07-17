@@ -24,6 +24,10 @@
 			"settings": {
 			  "workbench.editorAssociations": {
 			    "*.md": "vscode.markdown.preview.editor"
+			  },
+			  "editor.inlineSuggest.enabled": true,
+			  "github.copilot.enable": {
+			    "*": true
 			  }
 			},
 			"extensions": [
