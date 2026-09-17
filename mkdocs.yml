@@ -15,13 +15,10 @@ copyright: >
 nav:
   - Home: index.md
   - Getting Started: 01_Get_Started.md
-  - Model Selection: 02_Model_Selection.md
-  - Model Augmentation: 03_Model_Augmentation.md
-  - Agent Building: 04_Agent_Building.md
-  - AI-Assisted Evaluations: 05_AI_Assisted_Evaluations.md
-  # - Migrate To Code: 05_Migrate_to_code.md
-  # - Bonus Evaluations: 06_Bonus_Evaluations.md
-  - Summary: 06_Summary.md
+  - Agent Building: 02_Agent_Building.md
+  - Human Evaluations: 03_Human_Evaluations.md
+  - AI-Assisted Evaluations: 04_AI_Assisted_Evaluations.md
+  - Summary: 05_Summary.md
 
 plugins:
   - glightbox
@@ -37,14 +34,12 @@ plugins:
 theme:
   name: material
   features:
-    - navigation.instant
     - navigation.footer
     - content.code.copy
-    - navigation.tabs.sticky 
+    - navigation.tabs.sticky
     - content.tabs.link
 
   font:
-    code: Roboto Mono
     text: Roboto
 
   palette:
