@@ -1,6 +1,7 @@
 site_name: Accelerate AI Agents Development with the Foundry Toolkit
 site_author: Carlotta Castelluccio
 site_description: Learn how to accelerate the development of AI agents using the Foundry Toolkit in VS Code.
+site_url: https://carlotta94c.github.io/accelerate-ai-agents-development-with-gh-models-and-ai-toolkit/
 
 # Repository ..................................................
 repo_name: Accelerate AI Agents Development with the Foundry Toolkit
@@ -18,8 +19,8 @@ nav:
   - Model Augmentation: 03_Model_Augmentation.md
   - Agent Building: 04_Agent_Building.md
   - AI-Assisted Evaluations: 05_AI_Assisted_Evaluations.md
- # - Migrate To Code: 05_Migrate_to_code.md
- # - Bonus Evaluations: 06_Bonus_Evaluations.md
+  # - Migrate To Code: 05_Migrate_to_code.md
+  # - Bonus Evaluations: 06_Bonus_Evaluations.md
   - Summary: 06_Summary.md
 
 plugins:
