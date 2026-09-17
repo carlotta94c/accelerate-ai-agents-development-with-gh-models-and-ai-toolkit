@@ -47,16 +47,16 @@ In this workshop, we will be using **GitHub Codespaces** to launch a cloud-hoste
 
 For this workshop, we will use an **Azure AI Proxy** that provides access to the latest AI models without requiring an Azure subscription. The proxy exposes OpenAI-compatible endpoints, so you can use it directly with the Foundry Toolkit.
 
-1. Open a browser and navigate to the [Azure AI Proxy Registration](https://yellow-cliff-01401ca10.5.azurestaticapps.net/event/6545-a331) page.
+1. Open a browser and navigate to the [Azure AI Proxy Registration](https://blue-beach-0df863010.7.azurestaticapps.net/event/be6b-7fab) page.
 
 2. Click on **Login with GitHub** on the top right corner of the page and authenticate using your GitHub account credentials.
 
-3. Once logged in, you will see your **Event API Key** and the **Model Endpoint** available for this workshop. Copy endpoint and key values — you will need them in the next step to configure the models in the Foundry Toolkit.
+3. Once logged in, you will see your **Event API Key** and the **Model Endpoints** available for this workshop. Copy both values — you will need them in the next step to configure the models in the Foundry Toolkit.
 
 ![Foundry Toolkit access](../img/foundry-toolkit-access.png)
 
 !!! tip
-    Keep this browser tab open or store the API key and endpoint URL in a safe place (e.g., a text file in your Codespace), as you will need them throughout the workshop.
+    Keep this browser tab open or store the API key and endpoint URLs in a safe place (e.g., a text file in your Codespace), as you will need them throughout the workshop.
 
 ## Verify Foundry Toolkit extension is installed
 

@@ -17,9 +17,10 @@ nav:
   - Model Selection: 02_Model_Selection.md
   - Model Augmentation: 03_Model_Augmentation.md
   - Agent Building: 04_Agent_Building.md
+  - AI-Assisted Evaluations: 05_AI_Assisted_Evaluations.md
  # - Migrate To Code: 05_Migrate_to_code.md
  # - Bonus Evaluations: 06_Bonus_Evaluations.md
- # - Summary: 07_Summary.md
+  - Summary: 06_Summary.md
 
 plugins:
   - glightbox
